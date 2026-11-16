@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Histeon 0.5.14\n"
+"Project-Id-Version: Histeon 0.5.15\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/xb\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2894,7 +2894,7 @@ msgid "In Histeon CSS"
 msgstr ""
 
 #: src/Admin/SettingsScreen.php:489
-msgid "Consigliato. Il framework libero di Histeon, già incluso: i suoi token prendono i valori di ACSS, la palette parte dai tuoi colori, le classi equivalenti cambiano nome, il resto continua a valere. Nessun plugin esterno, nessuna licenza."
+msgid "Consigliato. Il framework libero di Histeon, già incluso: i suoi token prendono i valori di ACSS, la palette parte dai tuoi colori, le classi equivalenti cambiano nome, il resto continua a valere. Nessun plugin esterno."
 msgstr ""
 
 #: src/Admin/SettingsScreen.php:491
@@ -2902,7 +2902,7 @@ msgid "In Core Framework"
 msgstr ""
 
 #: src/Admin/SettingsScreen.php:491
-msgid "Un progetto con i colori e tutte le variabili di ACSS, più le sue regole che il sito usa. Open source, nessuna licenza."
+msgid "Un progetto con i colori e tutte le variabili di ACSS, più le sue regole che il sito usa. Open source."
 msgstr ""
 
 #: src/Admin/SettingsScreen.php:493
@@ -5425,7 +5425,7 @@ msgid "Per un sito che deve restare su Etch: riscrive pagine, componenti, templa
 msgstr ""
 
 #: src/Export/Etch/Admin.php:52
-msgid "Gli stili portano con sé Histeon CSS (i token --xb-* e le classi), open source e senza licenze. Condizioni, slot, tipi di contenuto e record, template di Histeon CMS non hanno un corrispettivo osservato in Etch: non vengono esportati e l'anteprima li elenca."
+msgid "Gli stili portano con sé Histeon CSS (i token --xb-* e le classi), open source. Condizioni, slot, tipi di contenuto e record, template di Histeon CMS non sono supportati dall'esportazione: non vengono esportati e l'anteprima li elenca."
 msgstr ""
 
 #: src/Export/Etch/Admin.php:59
@@ -5564,11 +5564,11 @@ msgid "Annidamento oltre %d livelli: contenuto più profondo omesso"
 msgstr ""
 
 #: src/Export/Etch/Converter.php:202
-msgid "Condizione (xb/if) non esportata con il suo contenuto: nei dati di Etch osservati le condizioni non comparivano"
+msgid "Condizione (xb/if) non esportata con il suo contenuto: le condizioni non sono supportate dall'esportazione"
 msgstr ""
 
 #: src/Export/Etch/Converter.php:203
-msgid "Slot (xb/slot) non esportato: nei dati di Etch osservati gli slot non comparivano"
+msgid "Slot (xb/slot) non esportato: gli slot non sono supportati dall'esportazione"
 msgstr ""
 
 #. translators: %s: block name
@@ -5623,7 +5623,7 @@ msgstr ""
 #. translators: %s: variable name
 #: src/Export/Etch/Converter.php:362
 #, php-format
-msgid "Indice del loop «%s» non esportato: nei dati di Etch osservati non c'era"
+msgid "Indice del loop «%s» non esportato: non supportato dall'esportazione"
 msgstr ""
 
 #. translators: 1: Histeon loop source, 2: Etch query id
@@ -5658,13 +5658,13 @@ msgstr ""
 #. translators: %s: prop name
 #: src/Export/Etch/Converter.php:414
 #, php-format
-msgid "Prop «%s» con una lista o un oggetto: non esportata (nei dati di Etch osservati le props sono testi e numeri)"
+msgid "Prop «%s» con una lista o un oggetto: non esportata (l'esportazione supporta solo props di testo e numeri)"
 msgstr ""
 
 #. translators: %s: component key
 #: src/Export/Etch/Converter.php:418
 #, php-format
-msgid "Contenuto negli slot del componente «%s» non esportato: nei dati di Etch osservati gli slot non comparivano"
+msgid "Contenuto negli slot del componente «%s» non esportato: gli slot non sono supportati dall'esportazione"
 msgstr ""
 
 #: src/Export/Etch/Converter.php:432
@@ -5696,7 +5696,7 @@ msgid "Chiave del componente «%1$s» → «%2$s»"
 msgstr ""
 
 #: src/Export/Etch/Exporter.php:130
-msgid "Schema delle props non esportato: nei dati di Etch osservati è quasi sempre vuoto e il suo formato non è noto; le istanze passano comunque i valori"
+msgid "Schema delle props non esportato: non supportato dall'esportazione; le istanze passano comunque i valori"
 msgstr ""
 
 #. translators: 1: variables, 2: classes
@@ -5775,7 +5775,7 @@ msgstr ""
 #. translators: %s: preset name
 #: src/Export/Etch/Queries.php:62
 #, php-format
-msgid "Loop sul preset «%s» non esportato: nei dati di Etch osservati non c'è una query equivalente"
+msgid "Loop sul preset «%s» non esportato: l'esportazione non ha una query equivalente"
 msgstr ""
 
 #. translators: %s: preset name
@@ -5787,7 +5787,7 @@ msgstr ""
 #. translators: 1: preset name, 2: query type
 #: src/Export/Etch/Queries.php:87
 #, php-format
-msgid "Loop sul preset «%1$s» di tipo %2$s non esportato: nei dati di Etch osservati non c'è una query equivalente"
+msgid "Loop sul preset «%1$s» di tipo %2$s non esportato: l'esportazione non ha una query equivalente"
 msgstr ""
 
 #. translators: %s: argument name

@@ -10,7 +10,7 @@
   import { t } from '../lib/i18n.ts';
   import { ariaKeys, keyHint } from '../lib/keys.svelte.ts';
 
-  // Right click (or the context-menu key, or Shift+F10) on a node of the structure, as in Etch: copy and paste
+  // Right click (or the context-menu key, or Shift+F10) on a node of the structure: copy and paste
   // between sites, duplicate, wrap and unwrap, make a component of that part, and the usual moves. Every action
   // is one the builder already has, so it is undone with Ctrl+Z like any other edit.
   let { app, uid, x, y, start = 'menu', onclose, onrename }: { app: BuilderState; uid: string; x: number; y: number; start?: 'menu' | 'component'; onclose: () => void; onrename: () => void } = $props();

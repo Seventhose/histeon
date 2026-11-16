@@ -8,7 +8,7 @@ declare(strict_types=1);
 namespace XB\Media;
 
 /**
- * Media collections — docs/spec/media.md. Nested folders for the media library (Etch's Asset Manager), as a
+ * Media collections — docs/spec/media.md. Nested folders for the media library, as a
  * private hierarchical taxonomy on attachments: no public pages, no query variable, no sitemap. Managed and
  * assigned by whoever can upload files, through WordPress's REST API (wp/v2/xb_media_collection and the
  * attachment's own field), so its permissions apply.

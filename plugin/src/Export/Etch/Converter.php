@@ -203,8 +203,8 @@ final class Converter {
 			'xb/raw'          => $this->raw( is_string( $attrs['content'] ?? null ) ? $attrs['content'] : '', $top ),
 			'xb/passthrough'  => array() === $inner ? null : $this->foreign( $inner[0], $roots, $depth + 1 ),
 			'xb/post-content' => self::etch( 'core/post-content', array() ),
-			'xb/if'           => $this->omit( __( 'Condizione (xb/if) non esportata con il suo contenuto: nei dati di Etch osservati le condizioni non comparivano', 'xb' ) ),
-			'xb/slot'         => $this->omit( __( 'Slot (xb/slot) non esportato: nei dati di Etch osservati gli slot non comparivano', 'xb' ) ),
+			'xb/if'           => $this->omit( __( 'Condizione (xb/if) non esportata con il suo contenuto: le condizioni non sono supportate dall\'esportazione', 'xb' ) ),
+			'xb/slot'         => $this->omit( __( 'Slot (xb/slot) non esportato: gli slot non sono supportati dall\'esportazione', 'xb' ) ),
 			default           => str_starts_with( $name, 'xb/' )
 				? $this->omit( sprintf( /* translators: %s: block name */ __( 'Blocco %s fuori posto o sconosciuto: non esportato', 'xb' ), $name ) )
 				: $this->foreign( $block, $roots, $depth + 1 ),
@@ -482,7 +482,7 @@ final class Converter {
 		}
 		$as = is_string( $attrs['as'] ?? null ) && 1 === preg_match( self::IDENTIFIER, $attrs['as'] ) ? $attrs['as'] : 'item';
 		if ( isset( $attrs['index'] ) ) {
-			$this->issues[] = sprintf( /* translators: %s: variable name */ __( 'Indice del loop «%s» non esportato: nei dati di Etch osservati non c\'era', 'xb' ), (string) $attrs['index'] );
+			$this->issues[] = sprintf( /* translators: %s: variable name */ __( 'Indice del loop «%s» non esportato: non supportato dall\'esportazione', 'xb' ), (string) $attrs['index'] );
 		}
 		$out = array(
 			'loopId' => $query['id'],
@@ -534,11 +534,11 @@ final class Converter {
 			} elseif ( is_scalar( $value ) || null === $value ) {
 				$props[ $name ] = $value;
 			} else {
-				$this->issues[] = sprintf( /* translators: %s: prop name */ __( 'Prop «%s» con una lista o un oggetto: non esportata (nei dati di Etch osservati le props sono testi e numeri)', 'xb' ), $name );
+				$this->issues[] = sprintf( /* translators: %s: prop name */ __( 'Prop «%s» con una lista o un oggetto: non esportata (l\'esportazione supporta solo props di testo e numeri)', 'xb' ), $name );
 			}
 		}
 		if ( array() !== $inner ) {
-			$this->issues[] = sprintf( /* translators: %s: component key */ __( 'Contenuto negli slot del componente «%s» non esportato: nei dati di Etch osservati gli slot non comparivano', 'xb' ), $ref );
+			$this->issues[] = sprintf( /* translators: %s: component key */ __( 'Contenuto negli slot del componente «%s» non esportato: gli slot non sono supportati dall\'esportazione', 'xb' ), $ref );
 		}
 		return self::etch(
 			'etch/component',

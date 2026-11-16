@@ -1,4 +1,4 @@
-// The canvas at any width (docs/spec/styles.md §8), as in Etch: no fixed devices, the page is drawn at the width
+// The canvas at any width (docs/spec/styles.md §8): no fixed devices, the page is drawn at the width
 // you drag it to, and a media or container query can start from exactly that width. Pure, tested in
 // test/canvasWidth.test.ts.
 

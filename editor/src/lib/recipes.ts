@@ -1,5 +1,5 @@
-// The recipes panel (docs/spec/histos-css.md §5): Histeon CSS's CSS recipes in groups, the names an Etch user types
-// for the same thing, and JavaScript recipes for the document's module. Every recipe is written for Histeon; the Etch
+// The recipes panel (docs/spec/histos-css.md §5): Histeon CSS's CSS recipes in groups, alternative names for the
+// same thing, and JavaScript recipes for the document's module. Every recipe is written for Histeon; the alternative
 // names are only aliases, so a habit carries over. Pure data and functions: the panel and the editor's completions
 // read them, the tests check them.
 import { t } from './i18n.ts';
@@ -21,8 +21,8 @@ export const CSS_GROUPS: RecipeGroup[] = [
   { id: 'a11y', label: t('Accessibilità e movimento'), names: ['nascosto-accessibile', 'link-salta', 'transizione', 'meno-movimento', 'barra-nascosta'] },
 ];
 
-/** Etch's recipe names → the Histeon recipe that does the same: `@auto-grid` (or Etch's `?auto-grid`) expands too. */
-export const ETCH_ALIASES: Record<string, string> = {
+/** Alternative recipe names → the Histeon recipe that does the same: `@auto-grid` (or `?auto-grid`) expands too. */
+export const RECIPE_ALIASES: Record<string, string> = {
   'auto-grid': 'griglia-auto',
   'center-all': 'centra',
   'center-top': 'centra-alto',
@@ -75,10 +75,10 @@ export const ETCH_ALIASES: Record<string, string> = {
   'skip-link': 'link-salta',
 };
 
-/** The recipe a typed name means: its own name, or the Histeon recipe an Etch name stands for. */
+/** The recipe a typed name means: its own name, or the Histeon recipe an alternative name stands for. */
 export function resolveRecipe(name: string, recipes: Record<string, string>): string | null {
   if (Object.hasOwn(recipes, name)) return name;
-  const alias = ETCH_ALIASES[name];
+  const alias = RECIPE_ALIASES[name];
   return alias !== undefined && Object.hasOwn(recipes, alias) ? alias : null;
 }
 
@@ -90,12 +90,12 @@ export function cssGroups(recipes: Record<string, string>): RecipeGroup[] {
   return site.length ? [...groups, { id: 'site', label: t('Dal sito'), names: site }] : groups;
 }
 
-/** What a filter keeps: the name, an Etch alias of it, or words of the code. */
+/** What a filter keeps: the name, an alternative name of it, or words of the code. */
 export function recipeMatches(name: string, css: string, query: string): boolean {
   const q = query.trim().toLowerCase();
   if (!q) return true;
   if (name.includes(q) || css.toLowerCase().includes(q)) return true;
-  return Object.entries(ETCH_ALIASES).some(([alias, target]) => target === name && alias.includes(q));
+  return Object.entries(RECIPE_ALIASES).some(([alias, target]) => target === name && alias.includes(q));
 }
 
 /** Which sample the preview shows a recipe on: children for layouts, a paragraph for text, a picture for media. */

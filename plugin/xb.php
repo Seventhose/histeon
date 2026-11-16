@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Histeon
  * Description:       Histeon (from ἱστός, the loom and the web woven on it): code-first visual builder on top of Gutenberg. Open source, no license keys, no telemetry.
- * Version:           0.5.14
+ * Version:           0.5.15
  * Requires at least: 6.9
  * Requires PHP:      8.3
  * License:           GPL-3.0-or-later
@@ -17,7 +17,7 @@ declare(strict_types=1);
 
 defined( 'ABSPATH' ) || exit;
 
-const XB_VERSION = '0.5.14';
+const XB_VERSION = '0.5.15';
 const XB_FILE    = __FILE__;
 
 // Doc 23 item 125: on an older PHP Histeon does not load, and says so in the administration instead of failing

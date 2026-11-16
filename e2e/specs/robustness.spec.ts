@@ -2,7 +2,7 @@ import { Builder } from '../lib/builder.ts';
 import { expect, test } from '../lib/test.ts';
 import { wpEval, wpEvalAsync } from '../lib/wp.ts';
 
-// Doc 26 of Histeon Publish, voce 222: two situations of real sites Etch fixed in its releases.
+// Two situations seen on real sites.
 
 test('il builder lavora anche con la REST chiusa agli anonimi, senza chiedere un accesso', async ({ page, data }) => {
   // A must-use plugin as security plugins do it: 401 with a Basic challenge to whoever is not logged in.

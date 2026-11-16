@@ -1,4 +1,4 @@
-// Quick actions of the builder (docs/research/etch-gap.md, "velocità di lavoro"): a component from the selection,
+// Quick actions of the builder, for working faster: a component from the selection,
 // SVG code turned into elements, BEM class names for a block's children.
 import { childrenOf, findClosingBrace, loopElse, parseExpression, type ElementBlock, type Expr, type XbBlock } from '@xb/dsl';
 import { t } from './i18n.ts';

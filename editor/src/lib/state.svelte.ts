@@ -802,7 +802,7 @@ export class BuilderState {
   }
 
   /**
-   * Turns the selected element into a new component (Etch's "component from selection"): the subtree becomes the
+   * Turns the selected element into a new component (a component from the selection): the subtree becomes the
    * component's markup, the selection becomes an instance of it. Refused when the subtree reads names that only
    * exist here, such as a surrounding loop's variable.
    */

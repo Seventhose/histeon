@@ -18,7 +18,7 @@ Lingua Bridge e Static Bridge, inclusi come moduli, hanno i loro repository (`Se
 
 ## Cosa Histeon considera una falla
 
-Il modello delle minacce e l'ultimo audit sono in `docs/security/`, nei sorgenti allegati a ogni release. In breve:
+Le difese sono descritte in [docs/adr/0005-revisione-sicurezza.md](docs/adr/0005-revisione-sicurezza.md) e, per chi usa Histeon, nel capitolo «Permessi e sicurezza» del manuale ([docs/manual/it/19-permessi-e-sicurezza.md](docs/manual/it/19-permessi-e-sicurezza.md)). In breve:
 
 - chi ha meno permessi riesce a fare ciò che il suo ruolo non permette (per esempio un collaboratore che esegue script, o che legge una bozza altrui);
 - contenuto salvato da un utente che esegue codice nel browser di un altro (XSS);

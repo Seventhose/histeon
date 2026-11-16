@@ -1,26 +1,26 @@
 <script lang="ts">
   import { t } from '../lib/i18n.ts';
   import { declarations, setDeclaration } from '../lib/miniGui.ts';
-  import { etchGroups, snippetChanges, snippetState, type EtchSnippet } from '../lib/miniGuiEtch.ts';
+  import { compactGroups, snippetChanges, snippetState, type CompactSnippet } from '../lib/miniGuiCompact.ts';
   import type { Snippet } from 'svelte';
 
-  // The mini GUI in Etch's style (docs/spec/styles.md §9): groups of small buttons in one strip, those that make
+  // The compact mini GUI (docs/spec/styles.md §9): groups of small buttons in one strip, those that make
   // sense here only; a button writes its declarations with a starting value into the selector's CSS (the value is
-  // then edited in the code, as in Etch), and a second click on a button that is on takes them away. Same props
+  // then edited in the code), and a second click on a button that is on takes them away. Same props
   // and same place as the Histeon mini GUI: the choice between them is the CSS panel's.
   let { css, onchange, selector, tag = '', state = null, lead, trail }: { css: string; onchange: (next: string) => void; selector: string; tag?: string; state?: string | null; lead?: Snippet; trail?: Snippet } = $props();
 
   const current = $derived(declarations(css));
-  const groups = $derived(etchGroups({ decls: current, tag: tag.toLowerCase(), state }));
+  const groups = $derived(compactGroups({ decls: current, tag: tag.toLowerCase(), state }));
 
-  function press(snippet: EtchSnippet) {
+  function press(snippet: CompactSnippet) {
     let next = css;
     for (const [prop, value] of snippetChanges(snippet, current)) next = setDeclaration(next, prop, value);
     onchange(next);
   }
 </script>
 
-<div class="mini etch" aria-label={t('Mini GUI di {0}', selector)} role="region">
+<div class="mini compact" aria-label={t('Mini GUI di {0}', selector)} role="region">
   <div class="bar">
     {@render lead?.()}
     <span class="grow"></span>

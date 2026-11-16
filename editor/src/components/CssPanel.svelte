@@ -3,7 +3,8 @@
   import CodeEditor from './CodeEditor.svelte';
   import { appendQueryBlock, conditionAt } from '../lib/canvasWidth.ts';
   import MiniGui from './MiniGui.svelte';
-  import MiniGuiEtch from './MiniGuiEtch.svelte';
+  import MiniGuiCompact from './MiniGuiCompact.svelte';
+  import { miniStyleFrom, type MiniStyle } from '../lib/miniGuiCompact.ts';
   import BulkMove from './BulkMove.svelte';
   import { bodyAt, rangeOf, setBodyAt, STATES, widthPreludes } from '../lib/cssContext.ts';
   import { LAYOUT_ACTIONS, applyDeclarations, cssCompletions, pxToRem, spacingScale } from '../lib/cssActions.ts';
@@ -26,7 +27,7 @@
   const sheets = $derived(app.globals.length > 0 ? app.globals.map((g) => g.id) : ['global']);
   const sheetCss = (id: string) => app.globals.find((g) => g.id === id)?.css ?? '';
   const classes = $derived(staticClasses(block));
-  // Selector pills, as in Etch: every static class, plus the id. CSS loads only on pages where they appear.
+  // Selector pills: every static class, plus the id. CSS loads only on pages where they appear.
   // Then the classes an expression adds (`{props.scura ? "card--scura" : ""}`): a variant's CSS is written here too.
   const selectors = $derived([...classes.map((c) => `.${c}`), ...conditionalClasses(block).map((c) => `.${c}`), ...(staticId(block) ? [`#${staticId(block)}`] : [])]);
   let chosen = $state<string | null>(null);
@@ -94,17 +95,18 @@
       /* ignore */
     }
   }
-  // Which mini GUI: Histeon's groups and rows, or Etch's strip of buttons, for who comes from Etch (remembered too).
-  let miniStyle = $state<'histos' | 'etch'>(readMiniStyle());
-  function readMiniStyle(): 'histos' | 'etch' {
+  // Which mini GUI: Histeon's groups and rows, or the compact strip of buttons (remembered too; `etch`, saved by
+  // earlier versions, reads as `compact`).
+  let miniStyle = $state<MiniStyle>(readMiniStyle());
+  function readMiniStyle(): MiniStyle {
     try {
-      return localStorage.getItem('xb-mini-gui-style') === 'etch' ? 'etch' : 'histos';
+      return miniStyleFrom(localStorage.getItem('xb-mini-gui-style'));
     } catch {
       return 'histos';
     }
   }
   function chooseMiniStyle(value: string) {
-    miniStyle = value === 'etch' ? 'etch' : 'histos';
+    miniStyle = miniStyleFrom(value);
     try {
       localStorage.setItem('xb-mini-gui-style', miniStyle);
     } catch {
@@ -143,7 +145,7 @@
     view = untrack(() => (own.trim() === '' && inSheets.length > 0 ? 'sheet' : 'own'));
   });
 
-  // ---- the class's rules in the global sheets, as in Etch: only those rules, each editable on its own.
+  // ---- the class's rules in the global sheets: only those rules, each editable on its own.
   // Each one remembers where it sits in its sheet and the exact text there; an edit is spliced back into that
   // spot only if the text is still the same (otherwise the sheet changed elsewhere and the rules are reloaded).
   const MAX_RULES = 30;
@@ -367,11 +369,11 @@
 {#snippet contextPickers()}
   <button class="icon" onclick={toggleMini} aria-pressed={miniOn} title={miniOn ? t('Nascondi la Mini GUI') : t('Mostra la Mini GUI')}>Mini GUI {miniOn ? '▾' : '▸'}</button>
   {#if miniOn}
-    <label class="pick" title={t('Come appare la Mini GUI: quella di Histeon o una come quella di Etch')}>
+    <label class="pick" title={t('Come appare la Mini GUI: quella di Histeon o quella compatta')}>
       <span class="sr">{t('Stile della Mini GUI')}</span>
       <select aria-label={t('Stile della Mini GUI')} value={miniStyle} onchange={(e) => chooseMiniStyle(e.currentTarget.value)}>
         <option value="histos">Histeon</option>
-        <option value="etch">{t('Stile Etch')}</option>
+        <option value="compact">{t('Stile compatto')}</option>
       </select>
     </label>
     <label class="pick" title={t('Dove scrive la Mini GUI: lo stato (● = ha già dichiarazioni)')}>
@@ -432,8 +434,8 @@
       {/if}
       <!-- The mini GUI here too, with its state and width (C3): it writes the class's own CSS, then shows it. -->
       {#if miniOn}
-        {#if miniStyle === 'etch'}
-          <MiniGuiEtch css={contextCss} onchange={(body) => (writeContext(body), (view = 'own'))} selector={path.length ? `${target} ${path.join(' ')}` : target} tag={block?.name === 'xb/element' ? block.attrs.tag : ''} state={ctxState} lead={contextPickers} />
+        {#if miniStyle === 'compact'}
+          <MiniGuiCompact css={contextCss} onchange={(body) => (writeContext(body), (view = 'own'))} selector={path.length ? `${target} ${path.join(' ')}` : target} tag={block?.name === 'xb/element' ? block.attrs.tag : ''} state={ctxState} lead={contextPickers} />
         {:else}
           <MiniGui {app} css={contextCss} onchange={(body) => (writeContext(body), (view = 'own'))} selector={path.length ? `${target} ${path.join(' ')}` : target} tag={block?.name === 'xb/element' ? block.attrs.tag : ''} lead={contextPickers} />
         {/if}
@@ -461,8 +463,8 @@
           <button class="icon" data-more-toggle aria-expanded={moreOpen} aria-haspopup="true" onclick={(e) => { placeMore(e.currentTarget); moreOpen = !moreOpen; }} title={t("Query alla larghezza dell'anteprima e azioni rapide")}>{t('Altro')} ▾</button>
         {/snippet}
         {#if miniOn && target}
-          {#if miniStyle === 'etch'}
-            <MiniGuiEtch css={contextCss} onchange={writeContext} selector={path.length ? `${target} ${path.join(' ')}` : target} tag={block?.name === 'xb/element' ? block.attrs.tag : ''} state={ctxState} lead={contextPickers} trail={moreButton} />
+          {#if miniStyle === 'compact'}
+            <MiniGuiCompact css={contextCss} onchange={writeContext} selector={path.length ? `${target} ${path.join(' ')}` : target} tag={block?.name === 'xb/element' ? block.attrs.tag : ''} state={ctxState} lead={contextPickers} trail={moreButton} />
           {:else}
             <MiniGui {app} css={contextCss} onchange={writeContext} selector={path.length ? `${target} ${path.join(' ')}` : target} tag={block?.name === 'xb/element' ? block.attrs.tag : ''} lead={contextPickers} trail={moreButton} />
           {/if}

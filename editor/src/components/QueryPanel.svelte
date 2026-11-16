@@ -259,7 +259,7 @@
     return block ? describe(block) : '';
   });
 
-  /** Etch's "Wrap in loop": the selected element becomes the template repeated for every record. */
+  /** Wrap in a loop: the selected element becomes the template repeated for every record. */
   function wrap() {
     if (!selected || !current || !app.selected) return;
     const args: Record<string, string> = parameters(current.args).includes('count') ? { count: String(previewCount) } : {};

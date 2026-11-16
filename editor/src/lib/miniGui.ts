@@ -1,4 +1,4 @@
-// The mini GUI (docs/spec/styles.md §9), Etch's idea: a compact toolbar over the CSS editor that writes the most
+// The mini GUI (docs/spec/styles.md §9): a compact toolbar over the CSS editor that writes the most
 // used declarations into the selector's code while you look at the element. The code stays the truth: every
 // control reads its state from the CSS and writes back plain declarations, with the framework's variables.
 // Pure, tested in test/miniGui.test.ts.

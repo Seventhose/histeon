@@ -10,7 +10,7 @@ namespace XB\Styles;
 use XB\Plugin;
 
 /**
- * CSS on demand, like Etch: a page carries only the rules whose selectors can match it — docs/spec/styles.md §3.
+ * CSS on demand: a page carries only the rules whose selectors can match it — docs/spec/styles.md §3.
  *
  * The front-end page is buffered; when it is complete its HTML is scanned (classes and ids) and:
  * - XB styles (global sheet and selector entries) replace a marker printed in the head;

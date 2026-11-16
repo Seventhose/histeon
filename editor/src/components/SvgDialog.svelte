@@ -4,7 +4,7 @@
   import { svgToBlocks } from '../lib/speed.ts';
   import type { BuilderState } from '../lib/state.svelte.ts';
 
-  // An SVG pasted or read from a file, inserted inline as elements (Etch's SVG element): cleaned before it enters
+  // An SVG pasted or read from a file, inserted inline as elements: cleaned before it enters
   // the page (lib/speed.ts svgToBlocks), filtered again by the server on save. Nothing is uploaded.
   let { app }: { app: BuilderState } = $props();
 

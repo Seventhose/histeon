@@ -63,7 +63,7 @@ final class Recipes {
 			'transizione'         => "transition-property: color, background-color, border-color, box-shadow, transform, opacity;\ntransition-duration: 150ms;\ntransition-timing-function: ease;",
 			'meno-movimento'      => "@media (prefers-reduced-motion: reduce) {\n  & {\n    transition: none;\n    animation: none;\n  }\n}",
 			'barra-nascosta'      => "scrollbar-width: none;\n&::-webkit-scrollbar {\n  display: none;\n}",
-			// More layouts (the gaps an Etch user looks for): fixed columns, uneven splits, a content grid with full-width
+			// More layouts: fixed columns, uneven splits, a content grid with full-width
 			// rows, wrapping flex columns, multi-column text, and content placed at one edge.
 			'griglia-5'           => $ram( 5 ),
 			'griglia-6'           => $ram( 6 ),

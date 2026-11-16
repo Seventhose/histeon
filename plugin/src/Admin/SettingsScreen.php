@@ -486,9 +486,9 @@ final class SettingsScreen {
 				<p class="xb-choices-title"><strong><?php esc_html_e( 'Il sito usa Automatic.css: dove va il suo sistema di design?', 'xb' ); ?></strong></p>
 				<div class="xb-choices" role="radiogroup" aria-label="<?php esc_attr_e( 'Dove va Automatic.css', 'xb' ); ?>">
 					<?php $cf_ok = (bool) ( $frameworks_all['core-framework'] ?? null )?->available(); ?>
-					<label class="xb-choice"><input type="radio" name="xb_framework_to" value="xb-tokens" checked> <strong><?php esc_html_e( 'In Histeon CSS', 'xb' ); ?></strong><span><?php esc_html_e( 'Consigliato. Il framework libero di Histeon, già incluso: i suoi token prendono i valori di ACSS, la palette parte dai tuoi colori, le classi equivalenti cambiano nome, il resto continua a valere. Nessun plugin esterno, nessuna licenza.', 'xb' ); ?></span></label>
+					<label class="xb-choice"><input type="radio" name="xb_framework_to" value="xb-tokens" checked> <strong><?php esc_html_e( 'In Histeon CSS', 'xb' ); ?></strong><span><?php esc_html_e( 'Consigliato. Il framework libero di Histeon, già incluso: i suoi token prendono i valori di ACSS, la palette parte dai tuoi colori, le classi equivalenti cambiano nome, il resto continua a valere. Nessun plugin esterno.', 'xb' ); ?></span></label>
 					<?php if ( $cf_ok ) : ?>
-						<label class="xb-choice"><input type="radio" name="xb_framework_to" value="core-framework"> <strong><?php esc_html_e( 'In Core Framework', 'xb' ); ?></strong><span><?php esc_html_e( 'Un progetto con i colori e tutte le variabili di ACSS, più le sue regole che il sito usa. Open source, nessuna licenza.', 'xb' ); ?></span></label>
+						<label class="xb-choice"><input type="radio" name="xb_framework_to" value="core-framework"> <strong><?php esc_html_e( 'In Core Framework', 'xb' ); ?></strong><span><?php esc_html_e( 'Un progetto con i colori e tutte le variabili di ACSS, più le sue regole che il sito usa. Open source.', 'xb' ); ?></span></label>
 					<?php endif; ?>
 					<label class="xb-choice"><input type="radio" name="xb_framework_to" value="keep"> <strong><?php esc_html_e( 'Resta su Automatic.css', 'xb' ); ?></strong><span><?php esc_html_e( 'Serve la sua licenza attiva.', 'xb' ); ?></span></label>
 				</div>

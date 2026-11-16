@@ -2715,16 +2715,16 @@ msgid "In Histeon CSS"
 msgstr "Into Histeon CSS"
 
 #: src/Admin/SettingsScreen.php:489
-msgid "Consigliato. Il framework libero di Histeon, già incluso: i suoi token prendono i valori di ACSS, la palette parte dai tuoi colori, le classi equivalenti cambiano nome, il resto continua a valere. Nessun plugin esterno, nessuna licenza."
-msgstr "Recommended. Histeon's free framework, already included: its tokens take ACSS's values, the palette starts from your colors, the equivalent classes are renamed, the rest keeps working. No external plugin, no license."
+msgid "Consigliato. Il framework libero di Histeon, già incluso: i suoi token prendono i valori di ACSS, la palette parte dai tuoi colori, le classi equivalenti cambiano nome, il resto continua a valere. Nessun plugin esterno."
+msgstr "Recommended. Histeon's free framework, already included: its tokens take ACSS's values, the palette starts from your colors, the equivalent classes are renamed, the rest keeps working. No external plugin."
 
 #: src/Admin/SettingsScreen.php:491
 msgid "In Core Framework"
 msgstr "Into Core Framework"
 
 #: src/Admin/SettingsScreen.php:491
-msgid "Un progetto con i colori e tutte le variabili di ACSS, più le sue regole che il sito usa. Open source, nessuna licenza."
-msgstr "A project with ACSS's colors and all its variables, plus its rules that the site uses. Open source, no license."
+msgid "Un progetto con i colori e tutte le variabili di ACSS, più le sue regole che il sito usa. Open source."
+msgstr "A project with ACSS's colors and all its variables, plus its rules that the site uses. Open source."
 
 #: src/Admin/SettingsScreen.php:493
 msgid "Resta su Automatic.css"
@@ -5164,8 +5164,8 @@ msgid "Per un sito che deve restare su Etch: riscrive pagine, componenti, templa
 msgstr "For a site that must stay on Etch: rewrites the pages, components, templates, styles and loops published in Histeon into this site's Etch data. First a preview, which changes nothing; writing makes a backup of everything it replaces and is undone with «Restore». The Histeon versions stay."
 
 #: src/Export/Etch/Admin.php:52
-msgid "Gli stili portano con sé Histeon CSS (i token --xb-* e le classi), open source e senza licenze. Condizioni, slot, tipi di contenuto e record, template di Histeon CMS non hanno un corrispettivo osservato in Etch: non vengono esportati e l'anteprima li elenca."
-msgstr "The styles carry Histeon CSS with them (the --xb-* tokens and the classes), open source and with no licences. Conditions, slots, content types and records, and Histeon CMS templates have no observed equivalent in Etch: they are not exported and the preview lists them."
+msgid "Gli stili portano con sé Histeon CSS (i token --xb-* e le classi), open source. Condizioni, slot, tipi di contenuto e record, template di Histeon CMS non sono supportati dall'esportazione: non vengono esportati e l'anteprima li elenca."
+msgstr "The styles carry Histeon CSS with them (the --xb-* tokens and the classes), open source. Conditions, slots, content types and records, and Histeon CMS templates are not supported by the export: they are not exported and the preview lists them."
 
 #: src/Export/Etch/Admin.php:59
 msgid "Nomi dei token"
@@ -5301,12 +5301,12 @@ msgid "Annidamento oltre %d livelli: contenuto più profondo omesso"
 msgstr "Nesting beyond %d levels: deeper content omitted"
 
 #: src/Export/Etch/Converter.php:202
-msgid "Condizione (xb/if) non esportata con il suo contenuto: nei dati di Etch osservati le condizioni non comparivano"
-msgstr "Condition (xb/if) not exported with its content: conditions did not appear in the Etch data observed"
+msgid "Condizione (xb/if) non esportata con il suo contenuto: le condizioni non sono supportate dall'esportazione"
+msgstr "Condition (xb/if) not exported with its content: conditions are not supported by the export"
 
 #: src/Export/Etch/Converter.php:203
-msgid "Slot (xb/slot) non esportato: nei dati di Etch osservati gli slot non comparivano"
-msgstr "Slot (xb/slot) not exported: slots did not appear in the Etch data observed"
+msgid "Slot (xb/slot) non esportato: gli slot non sono supportati dall'esportazione"
+msgstr "Slot (xb/slot) not exported: slots are not supported by the export"
 
 #. translators: %s: block name
 #, php-format
@@ -5357,8 +5357,8 @@ msgstr "Grouped loop over the query “%s” not exported: Etch does not group a
 #. translators: %s: variable name
 #, php-format
 #: src/Export/Etch/Converter.php:362
-msgid "Indice del loop «%s» non esportato: nei dati di Etch osservati non c'era"
-msgstr "Loop index «%s» not exported: it was not in the Etch data observed"
+msgid "Indice del loop «%s» non esportato: non supportato dall'esportazione"
+msgstr "Loop index «%s» not exported: not supported by the export"
 
 #. translators: 1: Histeon loop source, 2: Etch query id
 #, php-format
@@ -5392,14 +5392,14 @@ msgstr "Prop “%1$s” of an author without unfiltered HTML left out: %2$s"
 #. translators: %s: prop name
 #, php-format
 #: src/Export/Etch/Converter.php:414
-msgid "Prop «%s» con una lista o un oggetto: non esportata (nei dati di Etch osservati le props sono testi e numeri)"
-msgstr "Prop «%s» holds a list or an object: not exported (in the Etch data observed, props are text and numbers)"
+msgid "Prop «%s» con una lista o un oggetto: non esportata (l'esportazione supporta solo props di testo e numeri)"
+msgstr "Prop «%s» holds a list or an object: not exported (the export supports only text and number props)"
 
 #. translators: %s: component key
 #, php-format
 #: src/Export/Etch/Converter.php:418
-msgid "Contenuto negli slot del componente «%s» non esportato: nei dati di Etch osservati gli slot non comparivano"
-msgstr "Slot content of component «%s» not exported: slots did not appear in the Etch data observed"
+msgid "Contenuto negli slot del componente «%s» non esportato: gli slot non sono supportati dall'esportazione"
+msgstr "Slot content of component «%s» not exported: slots are not supported by the export"
 
 #: src/Export/Etch/Converter.php:432
 msgid "HTML grezzo con un commento di blocco (<!-- wp:…): non esportato, diventerebbe un blocco vero"
@@ -5430,8 +5430,8 @@ msgid "Chiave del componente «%1$s» → «%2$s»"
 msgstr "Component key «%1$s» → «%2$s»"
 
 #: src/Export/Etch/Exporter.php:130
-msgid "Schema delle props non esportato: nei dati di Etch osservati è quasi sempre vuoto e il suo formato non è noto; le istanze passano comunque i valori"
-msgstr "Props schema not exported: in the Etch data observed it is almost always empty and its format is unknown; instances still pass their values"
+msgid "Schema delle props non esportato: non supportato dall'esportazione; le istanze passano comunque i valori"
+msgstr "Props schema not exported: not supported by the export; instances still pass their values"
 
 #. translators: 1: variables, 2: classes
 #, php-format
@@ -5509,8 +5509,8 @@ msgstr "Unclosed brace in \"%s\": exported as text"
 #. translators: %s: preset name
 #, php-format
 #: src/Export/Etch/Queries.php:62
-msgid "Loop sul preset «%s» non esportato: nei dati di Etch osservati non c'è una query equivalente"
-msgstr "Loop on preset «%s» not exported: there is no equivalent query in the Etch data observed"
+msgid "Loop sul preset «%s» non esportato: l'esportazione non ha una query equivalente"
+msgstr "Loop on preset «%s» not exported: the export has no equivalent query"
 
 #. translators: %s: preset name
 #, php-format
@@ -5521,8 +5521,8 @@ msgstr "Loop on unknown preset «%s»: not exported"
 #. translators: 1: preset name, 2: query type
 #, php-format
 #: src/Export/Etch/Queries.php:87
-msgid "Loop sul preset «%1$s» di tipo %2$s non esportato: nei dati di Etch osservati non c'è una query equivalente"
-msgstr "Loop on preset «%1$s» of type %2$s not exported: there is no equivalent query in the Etch data observed"
+msgid "Loop sul preset «%1$s» di tipo %2$s non esportato: l'esportazione non ha una query equivalente"
+msgstr "Loop on preset «%1$s» of type %2$s not exported: the export has no equivalent query"
 
 #. translators: %s: argument name
 #, php-format

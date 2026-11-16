@@ -10,7 +10,7 @@
   import type { RenamePlan, SelectorList, SelectorUsage } from '../lib/api.ts';
   import type { BuilderState } from '../lib/state.svelte.ts';
 
-  // Selector manager, as in Etch: every selector with its usage; view and edit its CSS, rename, delete.
+  // Selector manager: every selector with its usage; view and edit its CSS, rename, delete.
   // Usage, rename and delete work on what is saved in dev (docs/spec/styles.md §4).
   /** `canManage`: may change the site settings, the safelist among them (C6). */
   let { app, visible, canManage = false }: { app: BuilderState; visible: boolean; canManage?: boolean } = $props();

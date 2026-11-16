@@ -179,9 +179,9 @@ namespace XB\Tests\Unit {
 			}
 		}
 
-		public function test_the_recipes_panel_groups_every_recipe_and_etch_names_point_at_one(): void {
+		public function test_the_recipes_panel_groups_every_recipe_and_alternative_names_point_at_one(): void {
 			$source = (string) file_get_contents( dirname( __DIR__, 3 ) . '/editor/src/lib/recipes.ts' );
-			$groups = substr( $source, (int) strpos( $source, 'export const CSS_GROUPS' ), (int) strpos( $source, 'export const ETCH_ALIASES' ) - (int) strpos( $source, 'export const CSS_GROUPS' ) );
+			$groups = substr( $source, (int) strpos( $source, 'export const CSS_GROUPS' ), (int) strpos( $source, 'export const RECIPE_ALIASES' ) - (int) strpos( $source, 'export const CSS_GROUPS' ) );
 			preg_match_all( "/names: \\[([^\\]]*)\\]/", $groups, $lists );
 			$grouped = array();
 			foreach ( $lists[1] as $list ) {
@@ -193,11 +193,11 @@ namespace XB\Tests\Unit {
 			$listed = array_values( array_unique( $grouped ) );
 			sort( $listed );
 			$this->assertSame( $recipes, $listed, 'the panel shows every Histeon recipe, and only those (editor/src/lib/recipes.ts)' );
-			$aliases = substr( $source, (int) strpos( $source, 'export const ETCH_ALIASES' ), (int) strpos( $source, 'export function resolveRecipe' ) - (int) strpos( $source, 'export const ETCH_ALIASES' ) );
+			$aliases = substr( $source, (int) strpos( $source, 'export const RECIPE_ALIASES' ), (int) strpos( $source, 'export function resolveRecipe' ) - (int) strpos( $source, 'export const RECIPE_ALIASES' ) );
 			preg_match_all( "/: '([a-z0-9-]+)',/", $aliases, $targets );
 			$this->assertNotEmpty( $targets[1] );
 			foreach ( $targets[1] as $target ) {
-				$this->assertContains( $target, $recipes, "an Etch name points at @$target" );
+				$this->assertContains( $target, $recipes, "an alternative name points at @$target" );
 			}
 		}
 

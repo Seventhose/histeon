@@ -385,7 +385,7 @@ export function replaceBlock(blocks: XbBlock[], uid: string, replacement: XbBloc
   ]);
 }
 
-/** Blocks that can become the repeated template of a loop: elements and components (Etch's "Wrap in loop"). */
+/** Blocks that can become the repeated template of a loop: elements and components (wrap in a loop). */
 export function canWrapInLoop(blocks: XbBlock[], uid: string | null): boolean {
   const block = uid ? findBlock(blocks, uid) : null;
   return !!block && (block.name === 'xb/element' || block.name === 'xb/component');
@@ -435,7 +435,7 @@ export function wrapBlock(blocks: XbBlock[], uid: string, tag: string, newUid: (
   return replaceBlock(blocks, uid, [wrapper]);
 }
 
-/** An element whose children can take its place (Etch's "unwrap"): an element with children. */
+/** An element whose children can take its place (unwrap): an element with children. */
 export function canUnwrap(block: XbBlock | null): boolean {
   return !!block && block.name === 'xb/element' && childrenOf(block).length > 0;
 }

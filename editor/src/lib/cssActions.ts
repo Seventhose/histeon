@@ -1,10 +1,10 @@
-// CSS quick actions (Etch's CSS Quick Actions, docs/spec/styles.md §7): layout and spacing buttons that write
+// CSS quick actions (docs/spec/styles.md §7): layout and spacing buttons that write
 // declarations into the selected class, abbreviations typed in the CSS editor, named queries in completions.
 import type { CompletionContext, CompletionResult, CompletionSource } from '@codemirror/autocomplete';
 import { statements } from '@xb/dsl';
 import { t } from './i18n.ts';
 import { variableSource, type NamedItem } from './completions.ts';
-import { ETCH_ALIASES } from './recipes.ts';
+import { RECIPE_ALIASES } from './recipes.ts';
 
 export interface CssAction {
   id: string;
@@ -149,8 +149,8 @@ export function queryProblem(name: string, query: string): string | null {
 
 /**
  * Recipes (Histeon CSS's own and those imported from Automatic.css, docs/spec/histos-css.md §5): `@name` at the
- * start of a declaration expands to the recipe's CSS. Etch's habits work too: `?name`, and Etch's recipe names
- * where Histeon has the same recipe under its own name (lib/recipes.ts, ETCH_ALIASES).
+ * start of a declaration expands to the recipe's CSS. `?name` works too, and so do the alternative names of a
+ * recipe that Histeon has under its own name (lib/recipes.ts, RECIPE_ALIASES).
  */
 export function recipeSource(recipes: () => Record<string, string>): CompletionSource {
   return (context: CompletionContext): CompletionResult | null => {
@@ -163,7 +163,7 @@ export function recipeSource(recipes: () => Record<string, string>): CompletionS
     // Only names that start with what was typed (no fuzzy match): `@media` never becomes a recipe by accident.
     const typed = word.text.slice(1);
     const own = Object.keys(all).filter((n) => n.startsWith(typed)).map((name) => ({ label: `${sigil}${name}`, name, detail: t('ricetta') }));
-    const aliases = Object.entries(ETCH_ALIASES)
+    const aliases = Object.entries(RECIPE_ALIASES)
       .filter(([alias, target]) => alias.startsWith(typed) && Object.hasOwn(all, target) && !Object.hasOwn(all, alias))
       .map(([alias, target]) => {
         const histos = `@${target}`;

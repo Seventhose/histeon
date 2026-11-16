@@ -457,7 +457,7 @@ final class LoopPresets {
 	}
 
 	/**
-	 * Public taxonomies, plus the ones an administrator allowed explicitly (an Etch site counted titles with
+	 * Public taxonomies, plus the ones an administrator allowed explicitly (a site may count titles with
 	 * WooCommerce's private `product_type`); never WordPress internals.
 	 */
 	public static function listable_taxonomy( mixed $taxonomy ): bool {

@@ -283,7 +283,7 @@ final class DeployTest extends IntegrationTestCase {
 		$this->assertSame( 403, $this->request( 'GET', '/deploy' )->get_status(), 'deploy history is for publishers only' );
 	}
 
-	/** P5: the static site answers with the security headers, from a closed list (PIANO.md §8.12). */
+	/** P5: the static site answers with the security headers, from a closed list (docs/spec/static.md). */
 	public function test_security_headers_reach_the_static_site(): void {
 		$this->configure();
 		$deploy = $this->request( 'POST', '/deploy' );

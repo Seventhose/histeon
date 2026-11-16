@@ -130,7 +130,7 @@ final class PostNode implements Node, \Stringable {
 			case 'commentCount':
 				return (int) $post->comment_count;
 			case 'readingTime':
-				// Minutes to read, as Etch counts them: words of the text at 200 a minute, rounded up. Part of the
+				// Minutes to read, as imported pages expect them: words of the text at 200 a minute, rounded up. Part of the
 				// text, so a password hides it like the excerpt.
 				return post_password_required( $post ) ? 0 : (int) ceil( str_word_count( wp_strip_all_tags( $post->post_content ) ) / 200 );
 			default:

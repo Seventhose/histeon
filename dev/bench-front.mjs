@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Measures built pages as a visitor's browser sees them (doc 26 of Histeon Publish, voce 223): the same page made
-// with Etch, with Histeon, through Static Bridge or Histeon Publish, side by side. Chromium from the e2e workspace,
+// Measures built pages as a visitor's browser sees them: the same page made with different builders, with
+// Histeon, through Static Bridge or Histeon Publish, side by side. Chromium from the e2e workspace,
 // a new context per run (cold cache), the median of the runs.
 //
 //   node dev/bench-front.mjs [--runs 5] [--mobile] [--json out.json] label=https://… [label=https://…] …

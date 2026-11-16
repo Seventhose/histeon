@@ -59,7 +59,7 @@ final class Queries {
 			return $this->builtin_posts( is_array( $source['args'] ?? null ) ? $source['args'] : array(), $issues );
 		}
 		if ( in_array( $id, array( 'terms', 'users' ), true ) ) {
-			$issues[] = sprintf( /* translators: %s: preset name */ __( 'Loop sul preset «%s» non esportato: nei dati di Etch osservati non c\'è una query equivalente', 'xb' ), $id );
+			$issues[] = sprintf( /* translators: %s: preset name */ __( 'Loop sul preset «%s» non esportato: l\'esportazione non ha una query equivalente', 'xb' ), $id );
 			return null;
 		}
 		$preset = $this->presets[ $id ] ?? null;
@@ -84,7 +84,7 @@ final class Queries {
 			}
 			return $this->entry( $id, $config, true );
 		}
-		$issues[] = sprintf( /* translators: 1: preset name, 2: query type */ __( 'Loop sul preset «%1$s» di tipo %2$s non esportato: nei dati di Etch osservati non c\'è una query equivalente', 'xb' ), self::short( $id ), $type );
+		$issues[] = sprintf( /* translators: 1: preset name, 2: query type */ __( 'Loop sul preset «%1$s» di tipo %2$s non esportato: l\'esportazione non ha una query equivalente', 'xb' ), self::short( $id ), $type );
 		return null;
 	}
 

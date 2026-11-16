@@ -127,7 +127,7 @@ final class Exporter {
 				}
 				$schema                                 = json_decode( (string) get_post_meta( $post->ID, ComponentRegistry::META_SCHEMA, true ), true );
 				if ( is_array( $schema ) && ! empty( $schema['props'] ) ) {
-					$issues[] = __( 'Schema delle props non esportato: nei dati di Etch osservati è quasi sempre vuoto e il suo formato non è noto; le istanze passano comunque i valori', 'xb' );
+					$issues[] = __( 'Schema delle props non esportato: non supportato dall\'esportazione; le istanze passano comunque i valori', 'xb' );
 				}
 			}
 			$out[]                 = $entry;

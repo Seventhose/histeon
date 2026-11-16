@@ -11,7 +11,7 @@ use XB\Render\ComponentRegistry;
 
 /**
  * The components a writer adds to an article (scheda libro, riquadro…): ordinary Histeon components under the key
- * `articolo/…`, always available, as Etch's are while Etch is off (Import\Etch\Runtime): the definition comes with the
+ * `articolo/…`, always available, like the components Import\Etch\Runtime serves: the definition comes with the
  * plugin and nothing is written to the site. A component of the same key stored on the site wins, so a site can change
  * one; Histeon Publish sends its own with the articles that use them. In Gutenberg they are patterns, whose props are
  * edited in the block's side panel.

@@ -26,7 +26,7 @@
   let canvasMenu = $state({ open: false, uid: '', x: 0, y: 0 });
   let ready = $state(false);
   /**
-   * The page is laid out at the width chosen by dragging the handles (or typed in), as in Etch: no fixed devices.
+   * The page is laid out at the width chosen by dragging the handles (or typed in): no fixed devices.
    * Dragging stops at the edge of the stage (no zoom by accident). A wider width can still be chosen on purpose,
    * typed in or from a breakpoint button: then the page is scaled down to fit, and the bar says by how much, so
    * the site's breakpoints see the real width whatever the window.

@@ -2,7 +2,7 @@
   import { compileCss } from '@xb/dsl';
   import { staticClasses, updateBlock } from '../lib/tree.ts';
   import { validClassName } from '../lib/selectors.ts';
-  import { ETCH_ALIASES, JS_RECIPES, cssGroups, jsPreviewDocument, jsRecipeCode, previewDocument, recipeMatches, sampleFor, type JsRecipe } from '../lib/recipes.ts';
+  import { RECIPE_ALIASES, JS_RECIPES, cssGroups, jsPreviewDocument, jsRecipeCode, previewDocument, recipeMatches, sampleFor, type JsRecipe } from '../lib/recipes.ts';
   import type { BuilderState } from '../lib/state.svelte.ts';
   import { t } from '../lib/i18n.ts';
 
@@ -28,7 +28,7 @@
   const groups = $derived(cssGroups(recipes).map((g) => ({ ...g, names: g.names.filter((n) => recipeMatches(n, recipes[n] ?? '', query)) })).filter((g) => g.names.length > 0));
   const jsList = $derived(JS_RECIPES.filter((r) => !query.trim() || `${r.name} ${r.label} ${r.description}`.toLowerCase().includes(query.trim().toLowerCase())));
   const scriptEditable = $derived(app.doc?.scriptEditable === true);
-  const aliasesOf = (name: string) => Object.entries(ETCH_ALIASES).filter(([, target]) => target === name).map(([alias]) => alias);
+  const aliasesOf = (name: string) => Object.entries(RECIPE_ALIASES).filter(([, target]) => target === name).map(([alias]) => alias);
 
   /** Trying a recipe: the sample in the panel, and for CSS the element in the canvas (its class, or the element itself). */
   function show(next: typeof previewing) {
@@ -104,7 +104,7 @@
       <button role="tab" aria-selected={kind === 'css'} class:active={kind === 'css'} onclick={() => (kind = 'css')}>CSS</button>
       <button role="tab" aria-selected={kind === 'js'} class:active={kind === 'js'} onclick={() => (kind = 'js')}>JavaScript</button>
     </div>
-    <input type="search" bind:value={query} placeholder={t('Cerca (anche coi nomi di Etch)')} aria-label={t('Cerca una ricetta')} />
+    <input type="search" bind:value={query} placeholder={t('Cerca (anche coi nomi alternativi)')} aria-label={t('Cerca una ricetta')} />
   </div>
 
   <div class="target">
@@ -149,7 +149,7 @@
               onblur={hide}
               onclick={() => applyCss(name)}
               aria-disabled={!target}
-              title={aliases.length ? t('In Etch: {0}', aliases.map((a) => `?${a}`).join(', ')) : undefined}
+              title={aliases.length ? t('Nomi alternativi: {0}', aliases.map((a) => `?${a}`).join(', ')) : undefined}
               aria-label={t('Applica la ricetta @{0}', name)}
             >@{name}</button>
           {/each}
@@ -180,7 +180,7 @@
       </div>
     {/if}
   </div>
-  <p class="muted note">{t('{0} ricette CSS: scrivile anche nel CSS con @nome (o ?nome, come in Etch).', String(Object.keys(recipes).length))}</p>
+  <p class="muted note">{t('{0} ricette CSS: scrivile anche nel CSS con @nome (o ?nome).', String(Object.keys(recipes).length))}</p>
   </div>
 </div>
 

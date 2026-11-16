@@ -311,7 +311,7 @@ final class Renderer {
 			$srcset = (string) wp_get_attachment_image_srcset( $id, $size );
 			$srcset = implode( ', ', array_filter( array_map( array( self::class, 'srcset_candidate' ), explode( ',', $srcset ) ) ) );
 			if ( 'full' !== $size && is_array( $file ) ) {
-				// A size was chosen: no file wider than it, as Etch did with maximumSize (doc 26 voce 223).
+				// A size was chosen: no file wider than it.
 				$srcset = self::srcset_up_to( $srcset, (int) $file[1] );
 			}
 			if ( '' !== $srcset ) {

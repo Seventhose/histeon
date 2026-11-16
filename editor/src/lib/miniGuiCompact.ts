@@ -1,11 +1,11 @@
-// The mini GUI as Etch shows it (docs/spec/styles.md §9), for who comes from Etch: groups of small buttons, each
+// The compact mini GUI (docs/spec/styles.md §9): groups of small buttons, each
 // writing one or more declarations with a starting value into the selector's CSS, where the value is then edited
 // by hand. A group appears when it makes sense here: grid settings for a grid, alignment for flex or grid, text
 // settings for a text element, filters for an image, motion in a state such as :hover. The values are Histeon's
 // (tokens with a fallback), so they work with any framework.
 import { t } from './i18n.ts';
 
-export interface EtchContext {
+export interface CompactContext {
   /** The declarations the CSS has now (property → value). */
   decls: Record<string, string>;
   /** The element's tag (lowercase), '' when not an element. */
@@ -14,7 +14,7 @@ export interface EtchContext {
   state: string | null;
 }
 
-export interface EtchSnippet {
+export interface CompactSnippet {
   id: string;
   label: string;
   /** A short mark for the button: letters or a symbol, never an image. */
@@ -24,18 +24,18 @@ export interface EtchSnippet {
   clears?: string[];
 }
 
-export interface EtchGroup {
+export interface CompactGroup {
   id: string;
   label: string;
-  when?: (context: EtchContext) => boolean;
-  snippets: EtchSnippet[];
+  when?: (context: CompactContext) => boolean;
+  snippets: CompactSnippet[];
 }
 
 const TEXT_TAGS = new Set(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'a', 'li', 'label', 'blockquote', 'figcaption', 'strong', 'em', 'small', 'button', 'dt', 'dd', 'cite', 'q', 'time', 'legend', 'summary', 'caption', 'th', 'td']);
 const MEDIA_TAGS = new Set(['img', 'picture', 'video', 'svg', 'iframe', 'canvas']);
-const display = (c: EtchContext) => (c.decls.display ?? '').trim();
+const display = (c: CompactContext) => (c.decls.display ?? '').trim();
 
-export const ETCH_GROUPS: EtchGroup[] = [
+export const COMPACT_GROUPS: CompactGroup[] = [
   {
     id: 'display',
     label: t('Display'),
@@ -160,12 +160,12 @@ export const ETCH_GROUPS: EtchGroup[] = [
 ];
 
 /** The groups that make sense here, in order. */
-export function etchGroups(context: EtchContext): EtchGroup[] {
-  return ETCH_GROUPS.filter((g) => !g.when || g.when(context));
+export function compactGroups(context: CompactContext): CompactGroup[] {
+  return COMPACT_GROUPS.filter((g) => !g.when || g.when(context));
 }
 
 /** `on`: the CSS has every declaration of the snippet as it writes them; `set`: some of its properties have another value. */
-export function snippetState(snippet: EtchSnippet, decls: Record<string, string>): 'on' | 'set' | 'off' {
+export function snippetState(snippet: CompactSnippet, decls: Record<string, string>): 'on' | 'set' | 'off' {
   const props = Object.keys(snippet.set);
   if (props.every((p) => (decls[p] ?? '').trim() === snippet.set[p])) return 'on';
   return props.some((p) => decls[p] !== undefined) ? 'set' : 'off';
@@ -175,7 +175,18 @@ export function snippetState(snippet: EtchSnippet, decls: Record<string, string>
  * What a click does: a snippet that is on comes off (its properties are removed), otherwise its declarations are
  * written (an existing value is replaced) and what it clears goes. A list of [property, value | null].
  */
-export function snippetChanges(snippet: EtchSnippet, decls: Record<string, string>): Array<[string, string | null]> {
+export function snippetChanges(snippet: CompactSnippet, decls: Record<string, string>): Array<[string, string | null]> {
   if (snippetState(snippet, decls) === 'on') return Object.keys(snippet.set).map((p) => [p, null]);
   return [...Object.entries(snippet.set), ...(snippet.clears ?? []).filter((p) => decls[p] !== undefined).map((p): [string, null] => [p, null])];
+}
+
+/** Which mini GUI the panel shows: Histeon's groups and rows, or the compact strip. */
+export type MiniStyle = 'histos' | 'compact';
+
+/**
+ * The style a saved preference (`localStorage['xb-mini-gui-style']`) stands for: `compact`, or `etch` as saved by
+ * versions before 0.5.15 for the same strip; anything else is Histeon's.
+ */
+export function miniStyleFrom(saved: string | null | undefined): MiniStyle {
+  return saved === 'compact' || saved === 'etch' ? 'compact' : 'histos';
 }

@@ -23,7 +23,7 @@ test('pannello Ricette: si prova sulla tela passando sopra, si applica alla clas
   await page.mouse.move(5, 5);
   await expect(hero).toHaveCSS('display', display);
 
-  // An Etch name finds the Histeon recipe.
+  // An alternative name finds the Histeon recipe.
   await panel.getByLabel('Cerca una ricetta').fill('auto-grid');
   await expect(panel.getByRole('button', { name: 'Applica la ricetta @griglia-auto', exact: true })).toBeVisible();
   await panel.getByLabel('Cerca una ricetta').fill('');

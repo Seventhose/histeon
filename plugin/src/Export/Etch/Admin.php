@@ -49,7 +49,7 @@ final class Admin {
 		<p><?php esc_html_e( 'Per un sito che deve restare su Etch: riscrive pagine, componenti, template, stili e loop pubblicati in Histeon nei dati di Etch di questo sito. Prima un\'anteprima, che non modifica nulla; la scrittura fa una copia di sicurezza di tutto ciò che sostituisce e si annulla con «Ripristina». Le versioni di Histeon restano.', 'xb' ); ?></p>
 		</div></div>
 		<div class="xb-panel-body">
-		<p class="description"><?php esc_html_e( 'Gli stili portano con sé Histeon CSS (i token --xb-* e le classi), open source e senza licenze. Condizioni, slot, tipi di contenuto e record, template di Histeon CMS non hanno un corrispettivo osservato in Etch: non vengono esportati e l\'anteprima li elenca.', 'xb' ); ?></p>
+		<p class="description"><?php esc_html_e( 'Gli stili portano con sé Histeon CSS (i token --xb-* e le classi), open source. Condizioni, slot, tipi di contenuto e record, template di Histeon CMS non sono supportati dall\'esportazione: non vengono esportati e l\'anteprima li elenca.', 'xb' ); ?></p>
 		<?php if ( null !== $plan ) : ?>
 			<?php self::render_plan( $plan ); ?>
 		<?php endif; ?>

@@ -100,13 +100,13 @@ test('mini GUI: stato e larghezza anche dalla vista «Nel foglio» e nei blocchi
   expect((await builder.source(own)).indexOf('display: flex;')).toBeGreaterThan((await builder.source(own)).indexOf('@container'));
 });
 
-test('Mini GUI in stile Etch: gruppi che compaiono quando servono, valori di partenza scritti nel CSS e tolti al secondo clic', async ({ page, data }) => {
+test('Mini GUI in stile compatto: gruppi che compaiono quando servono, valori di partenza scritti nel CSS e tolti al secondo clic', async ({ page, data }) => {
   const builder = await Builder.open(page, data.pages.css.id);
   await builder.node('section.e2e-hero').click();
   await builder.tab('CSS');
   const css = builder.editor('CSS di .e2e-hero');
   await builder.write(css, 'padding: 1rem;');
-  await page.getByLabel('Stile della Mini GUI').selectOption('etch');
+  await page.getByLabel('Stile della Mini GUI').selectOption('compact');
   const mini = page.getByRole('region', { name: 'Mini GUI di .e2e-hero' });
   try {
     // Grid settings appear once the element is a grid.
@@ -125,7 +125,7 @@ test('Mini GUI in stile Etch: gruppi che compaiono quando servono, valori di par
     await page.reload();
     await builder.node('section.e2e-hero').click();
     await builder.tab('CSS');
-    await expect(page.getByLabel('Stile della Mini GUI')).toHaveValue('etch');
+    await expect(page.getByLabel('Stile della Mini GUI')).toHaveValue('compact');
   } finally {
     await page.getByLabel('Stile della Mini GUI').selectOption('histos');
   }

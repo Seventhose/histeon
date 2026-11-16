@@ -8,7 +8,7 @@ declare(strict_types=1);
 namespace XB\StaticSite;
 
 /**
- * Security headers of the static site (PIANO.md §8.12): a closed list, so a site may change their values
+ * Security headers of the static site (docs/spec/static.md): a closed list, so a site may change their values
  * (`xb_static_security_headers`) but never add other headers. They reach every response: the `_headers` file
  * of the static ZIP (Cloudflare Pages, Netlify), the assets config of the Workers deploy, and the Worker's own
  * responses (forms).

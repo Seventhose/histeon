@@ -1,17 +1,17 @@
 import { describe, expect, it } from 'vitest';
 import { declarations, setDeclaration } from '../src/lib/miniGui.ts';
-import { ETCH_GROUPS, etchGroups, snippetChanges, snippetState } from '../src/lib/miniGuiEtch.ts';
+import { COMPACT_GROUPS, compactGroups, miniStyleFrom, snippetChanges, snippetState } from '../src/lib/miniGuiCompact.ts';
 
-const ids = (css: string, tag = 'div', state: string | null = null) => etchGroups({ decls: declarations(css), tag, state }).map((g) => g.id);
-const snippet = (group: string, id: string) => ETCH_GROUPS.find((g) => g.id === group)!.snippets.find((s) => s.id === id)!;
+const ids = (css: string, tag = 'div', state: string | null = null) => compactGroups({ decls: declarations(css), tag, state }).map((g) => g.id);
+const snippet = (group: string, id: string) => COMPACT_GROUPS.find((g) => g.id === group)!.snippets.find((s) => s.id === id)!;
 function press(css: string, group: string, id: string): string {
   let next = css;
   for (const [prop, value] of snippetChanges(snippet(group, id), declarations(css))) next = setDeclaration(next, prop, value);
   return next;
 }
 
-describe('mini GUI in Etch style', () => {
-  it('shows a group only where it makes sense, as Etch does', () => {
+describe('The compact mini GUI', () => {
+  it('shows a group only where it makes sense', () => {
     expect(ids('')).toEqual(['display', 'transition', 'position', 'box']);
     expect(ids('display: grid;')).toContain('grid');
     expect(ids('display: grid;')).toContain('align');
@@ -35,5 +35,15 @@ describe('mini GUI in Etch style', () => {
     css = press(css, 'grid', 'columns');
     expect(declarations(css)['grid-template-columns'], 'a second click takes it away').toBeUndefined();
     expect(snippetState(snippet('text', 'size'), declarations('font-size: 2rem;'))).toBe('set');
+  });
+});
+
+describe('the saved mini GUI style', () => {
+  it('reads `compact`, and `etch` saved by earlier versions, as the compact style', () => {
+    expect(miniStyleFrom('compact')).toBe('compact');
+    expect(miniStyleFrom('etch'), 'the value saved before 0.5.15 finds the same strip').toBe('compact');
+    expect(miniStyleFrom('histos')).toBe('histos');
+    expect(miniStyleFrom(null), 'nothing saved').toBe('histos');
+    expect(miniStyleFrom('altro')).toBe('histos');
   });
 });

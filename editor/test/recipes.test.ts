@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { CompletionContext } from '@codemirror/autocomplete';
 import { EditorState } from '@codemirror/state';
 import { recipeSource } from '../src/lib/cssActions.ts';
-import { CSS_GROUPS, ETCH_ALIASES, JS_RECIPES, cssGroups, jsPreviewDocument, jsRecipeCode, previewDocument, recipeMatches, resolveRecipe, sampleFor } from '../src/lib/recipes.ts';
+import { CSS_GROUPS, RECIPE_ALIASES, JS_RECIPES, cssGroups, jsPreviewDocument, jsRecipeCode, previewDocument, recipeMatches, resolveRecipe, sampleFor } from '../src/lib/recipes.ts';
 
 const recipes = Object.fromEntries(CSS_GROUPS.flatMap((g) => g.names).map((n) => [n, `/* ${n} */ display: grid;`]));
 
@@ -20,20 +20,20 @@ describe('recipes panel', () => {
     expect(cssGroups({ centra: 'x' })).toEqual([expect.objectContaining({ id: 'layout', names: ['centra'] })]);
   });
 
-  it('takes Etch’s names as aliases of the same Histeon recipe', () => {
-    for (const target of Object.values(ETCH_ALIASES)) expect(Object.hasOwn(recipes, target), target).toBe(true);
+  it('takes alternative names as aliases of the same Histeon recipe', () => {
+    for (const target of Object.values(RECIPE_ALIASES)) expect(Object.hasOwn(recipes, target), target).toBe(true);
     expect(resolveRecipe('auto-grid', recipes)).toBe('griglia-auto');
     expect(resolveRecipe('griglia-auto', recipes)).toBe('griglia-auto');
     expect(resolveRecipe('niente', recipes)).toBeNull();
-    expect(recipeMatches('griglia-auto', '', 'auto-grid'), 'the filter finds a recipe by its Etch name').toBe(true);
+    expect(recipeMatches('griglia-auto', '', 'auto-grid'), 'the filter finds a recipe by an alternative name').toBe(true);
     expect(recipeMatches('centra', 'place-items', 'place')).toBe(true);
   });
 
-  it('completes @name and ?name, Etch names included, only at the start of a declaration', () => {
+  it('completes @name and ?name, alternative names included, only at the start of a declaration', () => {
     expect(complete('.x { @gri')?.options.map((o) => o.label)).toContain('@griglia-auto');
-    const etch = complete('.x { ?auto-g');
-    expect(etch?.options.map((o) => o.label)).toEqual(['?auto-grid']);
-    expect(etch?.options[0]?.apply).toContain('griglia-auto');
+    const alias = complete('.x { ?auto-g');
+    expect(alias?.options.map((o) => o.label)).toEqual(['?auto-grid']);
+    expect(alias?.options[0]?.apply).toContain('griglia-auto');
     expect(complete('.x { color: @gri'), 'not inside a value').toBeNull();
     expect(complete('@media'), '@media is never a recipe').toBeNull();
   });
