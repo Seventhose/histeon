@@ -1,0 +1,14 @@
+<section class="hero">
+  <h1 class="hero__title">{site.name}</h1>
+  <p class="hero__lead">Costruito con <strong>XB</strong>: blocchi Gutenberg, nessun controllo visivo, solo codice.</p>
+</section>
+<section class="posts">
+  <h2>Ultimi articoli</h2>
+  <div class="posts__grid">
+    {#loop posts(limit: 3) as post, i}
+      <Card title={post.title} url={post.url} image={post.image} variant={i == 0 ? "featured" : "base"}>
+        <p>{post.excerpt.truncateWords(18)}</p>
+      </Card>
+    {/loop}
+  </div>
+</section>

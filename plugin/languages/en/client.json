@@ -1,0 +1,16 @@
+{
+  "documento": "document",
+  "%s: elementi aggiunti o tolti": "%s: elements added or removed",
+  "%s: tipo di blocco cambiato": "%s: block type changed",
+  "%s: codice HTML cambiato": "%s: HTML code changed",
+  "%s: espressioni {…} cambiate": "%s: {…} expressions changed",
+  "%s: immagine dinamica cambiata": "%s: dynamic image changed",
+  "%s: espressione {…} aggiunta all'immagine": "%s: {…} expression added to the image",
+  "%s: attributi cambiati": "%s: attributes changed",
+  "Le pagine fatte con Histeon si modificano dal builder, in modalità contenuti.": "Pages made with Histeon are edited in the builder, in content mode.",
+  "script della pagina": "page script",
+  "props del componente": "component props",
+  "In modalità contenuti si cambiano solo testi e immagini (%s).": "In content mode only texts and images change (%s).",
+  "Cliente Histeon": "Histeon client",
+  "%1$s: la prop «%2$s» non si può cambiare così": "%1$s: the prop «%2$s» cannot change this way"
+}

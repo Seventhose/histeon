@@ -1,0 +1,21 @@
+/* Loops, conditions and the post content in the block editor: a frame with what they do. Not on the site. */
+.fondamenta-editor-gruppo {
+	outline: 1px dashed currentColor;
+	outline-offset: 2px;
+	min-height: 2em;
+}
+.fondamenta-editor-gruppo[data-etichetta]::before {
+	content: attr(data-etichetta);
+	display: block;
+	font: 12px/1.6 system-ui, sans-serif;
+	opacity: .7;
+}
+.fondamenta-legame {
+	font-family: ui-monospace, monospace;
+	opacity: .8;
+}
+
+/* A bound text with no element around it: its keys shown in braces. */
+.fondamenta-editor-testo {
+	text-decoration: underline dotted;
+}

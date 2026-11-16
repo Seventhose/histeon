@@ -1,0 +1,289 @@
+# Copyright (C) 2026 
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Fondamenta 0.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/fondamenta\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-06T14:30:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: fondamenta\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Fondamenta"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Tema a blocchi di base. Con il costruttore attivo non aggiunge nulla e lascia disegnare lui; senza, dice in amministrazione cosa manca. Prende il posto di XB Blank."
+msgstr ""
+
+#. translators: %d: number of pages, posts and other contents
+#: functions.php:115
+#, php-format
+msgid "%d contenuto è fatto con i suoi blocchi e ora non mostra nulla."
+msgid_plural "%d contenuti sono fatti con i suoi blocchi e ora non mostrano nulla."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:118
+msgid "I template e le parti di Fondamenta usano gli stessi blocchi: il sito pubblico resta senza testata, piè di pagina e contenuto."
+msgstr ""
+
+#. translators: %s: names of content types, separated by commas
+#: functions.php:122
+#, php-format
+msgid "I tipi di contenuto %s non sono registrati: i loro contenuti restano nel database ma non hanno un indirizzo."
+msgstr ""
+
+#: functions.php:125
+msgid "Gli stili del sito non vengono stampati."
+msgstr ""
+
+#: functions.php:128
+msgid "Per convertire queste pagine nei blocchi di Fondamenta serve il plugin attivo: riattivalo."
+msgstr ""
+
+#. translators: %s: plugin name
+#: functions.php:133
+#, php-format
+msgid "Fondamenta è ferma: il plugin «%s», che disegna le pagine di questo sito, non è attivo."
+msgstr ""
+
+#: functions.php:134
+msgid "Fondamenta è ferma: il plugin che disegna le pagine di questo sito (cartella «xb») non è installato."
+msgstr ""
+
+#: functions.php:141
+msgid "Vai ai plugin"
+msgstr ""
+
+#: assets/editor.js:96
+msgid "Elemento"
+msgstr ""
+
+#: assets/editor.js:97
+msgid "Tag"
+msgstr ""
+
+#: assets/editor.js:98
+msgid "Classi"
+msgstr ""
+
+#: assets/editor.js:99
+msgid "Altri attributi:"
+msgstr ""
+
+#. translators: %s: bound values
+#: assets/editor.js:100
+#, js-format
+msgid "Valori presi dal contenuto mostrato: %s"
+msgstr ""
+
+#: assets/editor.js:100
+msgid "testo"
+msgstr ""
+
+#: assets/editor.js:121
+msgid "Sezione"
+msgstr ""
+
+#: assets/editor.js:122
+msgid "Contenitore"
+msgstr ""
+
+#: assets/editor.js:123
+msgid "Immagine"
+msgstr ""
+
+#: assets/editor.js:124
+msgid "Collegamento"
+msgstr ""
+
+#: assets/editor.js:125
+msgid "Pulsante"
+msgstr ""
+
+#: assets/editor.js:138
+msgid "query"
+msgstr ""
+
+#: assets/editor.js:139
+msgid "query della pagina"
+msgstr ""
+
+#. translators: %s: taxonomy
+#: assets/editor.js:140
+#, js-format
+msgid "termini di %s"
+msgstr ""
+
+#. translators: %s: field
+#: assets/editor.js:141
+#, js-format
+msgid "valori del campo %s"
+msgstr ""
+
+#: assets/editor.js:142
+msgid "pagine dell'archivio"
+msgstr ""
+
+#. translators: %s: repeater field
+#: assets/editor.js:143
+#, js-format
+msgid "righe del campo %s"
+msgstr ""
+
+#. translators: 1: filtered list, 2: filter
+#: assets/editor.js:146
+#, js-format
+msgid "opzioni del filtro %2$s di %1$s"
+msgstr ""
+
+#. translators: %s: filtered list
+#: assets/editor.js:147
+#, js-format
+msgid "filtri attivi di %s"
+msgstr ""
+
+#. translators: %s: filtered list
+#: assets/editor.js:148
+#, js-format
+msgid "pagine di %s"
+msgstr ""
+
+#. translators: %s: filtered list
+#: assets/editor.js:149
+#, js-format
+msgid "campi nascosti di %s"
+msgstr ""
+
+#. translators: %s: filtered list
+#: assets/editor.js:150
+#, js-format
+msgid "risultati di %s"
+msgstr ""
+
+#. translators: %s: source
+#: assets/editor.js:157
+#, js-format
+msgid "Loop: %s"
+msgstr ""
+
+#. translators: %s: tests
+#: assets/editor.js:167
+#, js-format
+msgid "Se no: %s"
+msgstr ""
+
+#. translators: %s: tests
+#. translators: %s: comparison
+#: assets/editor.js:167
+#: assets/editor.js:170
+#, js-format
+msgid "Se: %s"
+msgstr ""
+
+#. translators: %s: value
+#: assets/editor.js:172
+#, js-format
+msgid "Se manca: %s"
+msgstr ""
+
+#. translators: %s: value
+#: assets/editor.js:172
+#, js-format
+msgid "Se c'è: %s"
+msgstr ""
+
+#: assets/editor.js:174
+msgid "Mostra quando il valore manca"
+msgstr ""
+
+#: assets/editor.js:180
+msgid "Se il loop è vuoto"
+msgstr ""
+
+#: assets/editor.js:188
+msgid "Testo legato"
+msgstr ""
+
+#: assets/editor.js:194
+msgid "Il contenuto del post mostrato."
+msgstr ""
+
+#: blocks/altrimenti/block.json
+msgctxt "block title"
+msgid "Se il loop è vuoto"
+msgstr ""
+
+#: blocks/altrimenti/block.json
+msgctxt "block description"
+msgid "Dentro un loop: i blocchi da mostrare quando il loop non ha elementi."
+msgstr ""
+
+#: blocks/contenuto/block.json
+msgctxt "block title"
+msgid "Contenuto del post"
+msgstr ""
+
+#: blocks/contenuto/block.json
+msgctxt "block description"
+msgid "Il contenuto del post mostrato, senza involucro."
+msgstr ""
+
+#: blocks/elemento/block.json
+msgctxt "block title"
+msgid "Elemento"
+msgstr ""
+
+#: blocks/elemento/block.json
+msgctxt "block description"
+msgid "Un elemento HTML con il suo tag e i suoi attributi: contiene altri blocchi, un testo o niente."
+msgstr ""
+
+#: blocks/loop/block.json
+msgctxt "block title"
+msgid "Loop"
+msgstr ""
+
+#: blocks/loop/block.json
+msgctxt "block description"
+msgid "Ripete i suoi blocchi per ogni contenuto di una query, della query della pagina o di un elenco filtrato, per ogni termine del contenuto, per ogni valore o riga di un campo, per ogni pagina di un archivio, per ogni opzione di un filtro."
+msgstr ""
+
+#: blocks/se/block.json
+msgctxt "block title"
+msgid "Se c'è"
+msgstr ""
+
+#: blocks/se/block.json
+msgctxt "block description"
+msgid "Mostra i suoi blocchi solo se un valore del contenuto mostrato c'è (o, al contrario, se manca), oppure se i confronti con valori scritti sono veri."
+msgstr ""
+
+#: blocks/testo/block.json
+msgctxt "block title"
+msgid "Testo legato"
+msgstr ""
+
+#: blocks/testo/block.json
+msgctxt "block description"
+msgid "Un testo con valori del contenuto mostrato, senza un elemento attorno (fra due elementi della stessa riga)."
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""

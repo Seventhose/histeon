@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Histeon</title>
+  <rect width="64" height="64" rx="15" fill="#171A33"/>
+  <!-- The upright loom: two posts (the H's stems) and the warp threads between them. -->
+  <g stroke="#F3ECE1" stroke-linecap="round">
+    <line x1="16" y1="12" x2="16" y2="52" stroke-width="6"/>
+    <line x1="48" y1="12" x2="48" y2="52" stroke-width="6"/>
+    <line x1="27" y1="12" x2="27" y2="44" stroke-width="3" opacity=".8"/>
+    <line x1="37" y1="12" x2="37" y2="44" stroke-width="3" opacity=".8"/>
+  </g>
+  <!-- Loom weights keep the warp taut: the warp-weighted loom of ancient Greece. -->
+  <circle cx="27" cy="48" r="3.4" fill="#FF6F5E"/>
+  <circle cx="37" cy="48" r="3.4" fill="#FF6F5E"/>
+  <!-- The weft, the H's bar: over one warp thread, under the next — woven. -->
+  <line x1="16" y1="32" x2="48" y2="32" stroke="#FF6F5E" stroke-width="6" stroke-linecap="round"/>
+  <line x1="37" y1="28.5" x2="37" y2="35.5" stroke="#F3ECE1" stroke-width="3" opacity="1"/>
+</svg>

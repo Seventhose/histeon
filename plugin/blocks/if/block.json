@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "xb/if",
+	"title": "Histeon · Condizione",
+	"category": "design",
+	"description": "Mostra il primo ramo la cui condizione è vera.",
+	"textdomain": "xb",
+	"attributes": {
+		"uid": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false,
+		"reusable": false,
+		"inserter": false,
+		"renaming": false,
+		"lock": false
+	},
+	"editorScript": "xb-blocks-editor",
+	"editorStyle": "xb-blocks-editor"
+}

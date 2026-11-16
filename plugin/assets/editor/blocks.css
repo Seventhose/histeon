@@ -1,0 +1,94 @@
+/*
+ * XB blocks inside Gutenberg: the page as on the site. No labels or frames on the content itself; what only
+ * the builder edits (loops, components, raw HTML) is marked on hover only.
+ */
+
+/* The site's layout, not the editor's: XB pages are not squeezed into the theme's content width. */
+.is-root-container:has(> [data-type^="xb/"]) {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.is-root-container > [data-type^="xb/"] {
+	max-width: none !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.is-root-container > [data-type^="xb/"] + [data-type^="xb/"] {
+	margin-top: 0;
+}
+
+/* Logic and passthrough wrappers do not exist on the site. */
+.xb-editor-transparent,
+.xb-editor-passthrough {
+	display: contents;
+}
+.xb-editor-text {
+	display: inline;
+}
+
+/* Branches the site does not show, and the blocks behind a server rendering, stay in the document only. */
+.xb-editor-transparent[hidden],
+.xb-editor-hidden {
+	display: none !important;
+}
+
+/* Embedded pages (iframes, objects) keep their place and size but load nothing in the editor. */
+.xb-editor-embed {
+	min-height: 2em;
+	background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0 8px, transparent 8px 16px);
+}
+
+/* Rendered by the server as on the site; edited in XB. */
+.xb-editor-rendered {
+	display: contents;
+}
+.xb-editor-rendered.xb-editor-locked {
+	/* The block itself keeps its box: without one it takes no focus, and a click would not select it. */
+	display: block;
+	position: relative;
+}
+.xb-editor-locked:hover {
+	outline: 1px dashed rgba(56, 88, 233, 0.6);
+	outline-offset: -1px;
+}
+.xb-editor-pending {
+	min-height: 1.5em;
+	background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0 8px, transparent 8px 16px);
+}
+
+/* A block with rows: each row is selected on its own; images show as the page's gallery. */
+.xb-editor-rows .wp-block[data-type="xb/slot-fill"] > *, .xb-editor-rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: .6em; }
+.xb-editor-rows img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+
+/* The rich text of a component in the side panel. */
+.xb-prop-rich { min-height: 4em; padding: 6px 8px; border: 1px solid #949494; border-radius: 2px; }
+
+/* A component with slots (list 134): the component as the site shows it, then one editable area per slot. */
+.xb-editor-slots {
+	display: grid;
+	gap: .75em;
+	margin-top: .75em;
+	padding: .75em;
+	border: 1px dashed rgba(56, 88, 233, 0.5);
+	border-radius: 4px;
+	background: rgba(56, 88, 233, 0.03);
+}
+.xb-editor-slot-fill {
+	position: relative;
+	display: grid;
+	gap: .5em;
+	min-height: 3em;
+	padding: 1.6em .75em .75em;
+	border-radius: 3px;
+	background: #fff;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.xb-editor-slot-label {
+	position: absolute;
+	top: .35em;
+	left: .75em;
+	font: 600 11px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	letter-spacing: .02em;
+	color: #3858e9;
+	pointer-events: none;
+}

@@ -1,0 +1,9 @@
+{
+	"Tassonomie non pubbliche nei loop": "Non-public taxonomies in loops",
+	"I loop di termini mostrano solo le tassonomie pubbliche, a meno che tu non ammetta qui le altre: nomi, conteggi e descrizioni dei loro termini diventano visibili a chi visita.": "Term loops show only public taxonomies, unless you allow the others here: the names, counts and descriptions of their terms become visible to visitors.",
+	"Condizione di Etch con una forma sconosciuta": "Etch condition with an unknown shape",
+	"HTML grezzo con espressioni e markup insieme: Histeon non ha un equivalente": "Raw HTML with expressions and markup together: Histeon has no equivalent",
+	"HTML grezzo %s convertito in testo: se il valore contiene HTML, si vede come testo": "Raw HTML %s converted to text: if the value contains HTML, it shows as text",
+	"Tassonomie non pubbliche usate nei loop di termini, ammesse esplicitamente: %s (Impostazioni → Histeon, opzione xb_loop_taxonomies)": "Non-public taxonomies used in term loops, explicitly allowed: %s (Settings → Histeon, option xb_loop_taxonomies)",
+	"Solo un amministratore può ammettere nuove tassonomie nei loop.": "Only an administrator can allow new taxonomies in loops."
+}

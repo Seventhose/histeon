@@ -1,0 +1,75 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fondamenta/loop",
+	"title": "Loop",
+	"category": "theme",
+	"description": "Ripete i suoi blocchi per ogni contenuto di una query, della query della pagina o di un elenco filtrato, per ogni termine del contenuto, per ogni valore o riga di un campo, per ogni pagina di un archivio, per ogni opzione di un filtro.",
+	"textdomain": "fondamenta",
+	"attributes": {
+		"fonte": {
+			"type": "string",
+			"enum": [
+				"query",
+				"principale",
+				"termini",
+				"campo",
+				"pagine",
+				"filtri",
+				"righe"
+			],
+			"default": "query"
+		},
+		"query": {
+			"type": "object",
+			"default": {}
+		},
+		"tassonomia": {
+			"type": "string",
+			"default": ""
+		},
+		"campo": {
+			"type": "string",
+			"default": ""
+		},
+		"pagina": {
+			"type": "boolean",
+			"default": false
+		},
+		"facet": {
+			"type": "string",
+			"default": ""
+		},
+		"elenco": {
+			"type": "string",
+			"enum": [
+				"risultati",
+				"opzioni",
+				"attivi",
+				"pagine",
+				"nascosti"
+			],
+			"default": "risultati"
+		},
+		"filtro": {
+			"type": "string",
+			"default": ""
+		},
+		"dentro": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType",
+		"fondamenta/voce"
+	],
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"editorScript": "fondamenta-editor",
+	"editorStyle": "fondamenta-editor"
+}

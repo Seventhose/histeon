@@ -1,0 +1,7 @@
+{
+	"groupBy dopo una query vuole il campo e, se serve, il modo, come testi scritti: .groupBy(\"anno\") oppure .groupBy(\"date\", \"Y\")": "groupBy after a query takes the field and, if needed, the mode, as written text: .groupBy(\"year\") or .groupBy(\"date\", \"Y\")",
+	"Campo di groupBy non valido \"%s\": un nome o un percorso con punti (fields.anno)": "Invalid groupBy field \"%s\": a name or a dotted path (fields.year)",
+	"Modo di groupBy non valido: \"letter\" o un formato di data (\"Y\", \"F Y\"), al massimo 32 caratteri": "Invalid groupBy mode: \"letter\" or a date format (\"Y\", \"F Y\"), at most 32 characters",
+	"raggruppamento della query non valido": "invalid query grouping",
+	"Loop a gruppi sulla query «%s» non esportato: Etch non raggruppa il risultato di una query": "Grouped loop over the query “%s” not exported: Etch does not group a query result"
+}

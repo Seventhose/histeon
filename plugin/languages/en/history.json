@@ -1,0 +1,15 @@
+{
+  "Solo un amministratore può pulire la storia delle versioni.": "Only an administrator can clean up the version history.",
+  "Scegli quanto indietro tenere la storia.": "Choose how far back to keep the history.",
+  "Tolta %1$d versione più vecchia di %2$d mesi.": "Removed %1$d version older than %2$d months.",
+  "Tolte %1$d versioni più vecchie di %2$d mesi.": "Removed %1$d versions older than %2$d months.",
+  "Storia delle versioni": "Version history",
+  "%1$s versione salvata · %2$s · dal %3$s": "%1$s saved version · %2$s · since %3$s",
+  "%1$s versioni salvate · %2$s · dal %3$s": "%1$s saved versions · %2$s · since %3$s",
+  "Ogni salvataggio nel builder è una versione: si può riaprire e ripristinare dalla scheda Versioni. Con il tempo la storia cresce nel database.": "Every save in the builder is a version: it can be reopened and restored from the Versions screen. Over time the history grows in the database.",
+  "Le versioni tolte non si possono più ripristinare. Procedere?": "Removed versions can no longer be restored. Go ahead?",
+  "Togli le versioni più vecchie di": "Remove versions older than",
+  "%d mesi": "%d months",
+  "Pulisci la storia": "Clean up the history",
+  "Restano sempre: ciò che è in sviluppo e online, le versioni da cui partono, e ogni release, che resta ripristinabile.": "Always kept: what is in development and live, the versions they start from, and every release, which can still be restored."
+}

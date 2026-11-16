@@ -1,0 +1,7 @@
+{
+  "Nessuna sessione dell’agente da annullare.": "No agent session to undo.",
+  "non puoi modificarlo": "you cannot edit it",
+  "Non puoi gestire questa sessione dell’agente.": "You cannot manage this agent session.",
+  "Esito degli ultimi controlli": "Outcome of the last checks",
+  "Quanti errori e avvisi avevano trovato i controlli delle pagine con cui è uscita l'ultima release dal builder, regola per regola, con versione, data e, se c'è, quante pagine erano state controllate su quelle della release (pages: checked di total; con meno pagine i numeri non dicono nulla delle altre); null se non c'è. È un promemoria, non una prova: leggilo prima di chiedere la pubblicazione.": "How many errors and warnings the page checks had found when the last release went out from the builder, rule by rule, with version, date and, when there is one, how many of the release's pages were checked (pages: checked of total; with fewer pages the counts say nothing about the others); null if there is none. It is a reminder, not a proof: read it before asking for publication."
+}

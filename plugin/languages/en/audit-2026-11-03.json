@@ -1,0 +1,9 @@
+{
+  "con JavaScript": "with JavaScript",
+  "Histeon: la chiave di firma di questo sito non si legge più.": "Histeon: this site's signing key can no longer be read.",
+  "Le chiavi di wp-config.php sono cambiate: gli export escono senza firma.": "The keys in wp-config.php have changed: exports go out unsigned.",
+  "La chiave di firma di questo sito non si legge più: le chiavi di wp-config.php sono cambiate. Gli export escono senza firma finché non generi una nuova chiave; chi importa i tuoi file dovrà fidarsi di nuovo.": "This site's signing key can no longer be read: the keys in wp-config.php have changed. Exports go out unsigned until you generate a new key; whoever imports your files will have to trust it again.",
+  "I moduli del sito statico sono spenti: l'indirizzo REST di WordPress non è https, e i messaggi dei visitatori viaggerebbero in chiaro.": "The static site's forms are off: WordPress's REST address is not https, and visitors' messages would travel unencrypted.",
+  "Gli stili, con quelli di Etch, superano la dimensione massima (%1$d byte su %2$d): l'importazione non scrive nulla. Alleggerisci i fogli globali di Etch e riprova.": "The styles, together with Etch's, exceed the maximum size (%1$d of %2$d bytes): the import writes nothing. Trim Etch's global stylesheets and try again.",
+  "La pagina è cambiata dopo che l'hai aperta: ricaricala e approva di nuovo.": "The page changed after you opened it: reload it and approve again."
+}

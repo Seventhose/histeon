@@ -1,0 +1,4 @@
+<header class="site-header">
+  <a class="site-header__brand" href={site.url}>{site.name}</a>
+  <!-- wp:navigation {"overlayMenu":"mobile"} /-->
+</header>

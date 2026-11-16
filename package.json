@@ -1,0 +1,24 @@
+{
+  "name": "xb-monorepo",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "workspaces": [
+    "packages/*",
+    "editor",
+    "e2e"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "e2e": "dev/e2e.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "ajv": "^8.20.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

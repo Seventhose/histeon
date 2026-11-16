@@ -1,0 +1,51 @@
+# Copyright (C) 2026 
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: XB Blank 0.4.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/xb-blank\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-05T20:24:22+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: xb-blank\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "XB Blank"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Tema di compatibilità: Fondamenta ne prende il posto, con gli stessi template. Resta per i siti che lo usano ancora."
+msgstr ""
+
+#: functions.php:40
+msgid "XB Blank richiede il plugin XB attivo: senza, i template non mostrano nulla."
+msgstr ""
+
+#: functions.php:48
+msgid "Fondamenta prende il posto di XB Blank, con gli stessi template. Quando la attivi, i template e le parti che hai personalizzato in questo sito passano a Fondamenta."
+msgstr ""
+
+#: functions.php:51
+msgid "Attiva Fondamenta"
+msgstr ""
+
+#: functions.php:53
+msgid "Installala da Aspetto → Temi → Aggiungi tema → Carica tema, con il file fondamenta-….zip della stessa release del plugin."
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""

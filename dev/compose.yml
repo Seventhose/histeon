@@ -1,0 +1,70 @@
+# Local WordPress for XB integration tests and manual checks.
+# Uses only local images; listens on 127.0.0.1 only. Credentials are generated into dev/.env by dev/up.sh.
+# PHP 8.3 unless XB_PHP says otherwise (XB_PHP=8.5 dev/e2e.sh): the CI runs the browser tests on both.
+name: xb-dev
+
+x-wp-env: &wp-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_NAME: wordpress
+  WORDPRESS_DB_USER: wordpress
+  WORDPRESS_DB_PASSWORD: ${XB_DB_PASSWORD:?run dev/up.sh}
+  WORDPRESS_DEBUG: "1"
+
+x-wp-volumes: &wp-volumes
+  - wp:/var/www/html
+  - ../plugin:/var/www/html/wp-content/plugins/xb
+  - ../theme/fondamenta:/var/www/html/wp-content/themes/fondamenta
+  - ../theme/xb-blank:/var/www/html/wp-content/themes/xb-blank
+  - ../packages/spec:/xb/packages/spec:ro
+
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${XB_DB_PASSWORD:?run dev/up.sh}
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 2s
+      retries: 30
+
+  wordpress:
+    image: wordpress:php${XB_PHP:-8.3}-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${XB_PORT:-8899}:80"
+    environment: *wp-env
+    volumes: *wp-volumes
+
+  # Local stand-in for the Cloudflare API (dev and tests only). Reachable only on the compose network.
+  cfmock:
+    image: wordpress:cli-php${XB_PHP:-8.3}
+    entrypoint: ["php", "-S", "0.0.0.0:8080", "/mock/router.php"]
+    environment:
+      XB_MOCK_TOKEN: ${XB_MOCK_TOKEN:?run dev/up.sh}
+    volumes:
+      - ./cloudflare-mock:/mock:ro
+
+  cli:
+    image: wordpress:cli-php${XB_PHP:-8.3}
+    profiles: ["cli"]
+    user: "33:33"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      <<: *wp-env
+      HOME: /tmp
+      XB_MOCK_TOKEN: ${XB_MOCK_TOKEN:?run dev/up.sh}
+    volumes: *wp-volumes
+    working_dir: /var/www/html
+
+volumes:
+  wp:
+  db:

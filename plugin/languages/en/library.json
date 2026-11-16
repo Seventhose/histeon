@@ -1,0 +1,13 @@
+{
+  "Sezione inesistente.": "No such section.",
+  "Sezione non valida.": "Invalid section.",
+  "Sezione troppo grande.": "Section too large.",
+  "Dai un nome alla sezione.": "Give the section a name.",
+  "La libreria tiene al massimo %d sezioni.": "The library holds at most %d sections.",
+  "File della libreria non valido: %s.": "Invalid library file: %s.",
+  "contenuto alterato o incompleto": "altered or incomplete content",
+  "sezione %d": "section %d",
+  "Libreria di sezioni importata": "Section library imported",
+  "Sezione tolta dalla libreria": "Section removed from the library",
+  "Puoi togliere dalla libreria solo le sezioni che hai salvato tu.": "You can only remove sections you saved yourself from the library."
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+plugin/vendor/
+.phpunit.cache/
+.phpunit.result.cache
+*.log
+.DS_Store
+dev/.env
+plugin/assets/builder/
+plugin/assets/gutenberg/
+plugin/modules/
+
+# Banco dei modelli piccoli (scripts/bench/run.mjs)
+bench-run*.json

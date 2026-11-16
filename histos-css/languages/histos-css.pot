@@ -1,0 +1,118 @@
+# Copyright (C) 2026 Histeon
+# This file is distributed under the GPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Histeon CSS 0.3.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/app\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-04T08:54:25+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: histos-css\n"
+
+#. Plugin Name of the plugin
+#: histos-css.php
+msgid "Histeon CSS"
+msgstr ""
+
+#. Description of the plugin
+#: histos-css.php
+msgid "Il framework CSS libero di Histeon, per qualsiasi sito WordPress: token fluidi, palette OKLCH, classi, recipes, il pannello in popup (Alt+Maiusc+H) e la palette nell'editor a blocchi. Nessuna licenza."
+msgstr ""
+
+#. Author of the plugin
+#: histos-css.php
+msgid "Histeon"
+msgstr ""
+
+#: src/Core/Design.php:42
+msgid "Design: serve un oggetto nome → valore."
+msgstr ""
+
+#. translators: %s: parameter name
+#: src/Core/Design.php:49
+#, php-format
+msgid "Parametro sconosciuto: %s"
+msgstr ""
+
+#. translators: %s: colour family
+#. translators: %s: parameter name
+#: src/Core/Design.php:55
+#: src/Core/Design.php:63
+#, php-format
+msgid "Colore non valido per %s: usa #rrggbb, rgb() o oklch()."
+msgstr ""
+
+#. translators: %s: parameter name
+#: src/Core/Design.php:69
+#, php-format
+msgid "%s: serve 0 o 1."
+msgstr ""
+
+#. translators: 1: parameter name, 2: the values allowed
+#: src/Core/Design.php:76
+#, php-format
+msgid "%1$s: uno fra %2$s."
+msgstr ""
+
+#. translators: %s: parameter name
+#: src/Core/Design.php:84
+#, php-format
+msgid "%s: valore non valido."
+msgstr ""
+
+#. translators: %s: parameter name
+#: src/Core/Design.php:90
+#, php-format
+msgid "%s: auto, white, black, una famiglia o famiglia-sfumatura (primary-700)."
+msgstr ""
+
+#. translators: %s: parameter name
+#: src/Core/Design.php:101
+#, php-format
+msgid "%s: solo nomi di caratteri separati da virgole."
+msgstr ""
+
+#. translators: %s: parameter name
+#: src/Core/Design.php:108
+#, php-format
+msgid "%s: serve un numero."
+msgstr ""
+
+#. translators: 1: parameter name, 2: minimum, 3: maximum
+#: src/Core/Design.php:113
+#, php-format
+msgid "%1$s: fra %2$s e %3$s."
+msgstr ""
+
+#: src/Core/Design.php:119
+msgid "La viewport grande deve essere più larga di quella piccola."
+msgstr ""
+
+#: src/Plugin.php:43
+msgid "Histeon CSS è già incluso in Histeon: il plugin separato resta fermo e puoi disattivarlo."
+msgstr ""
+
+#: src/Plugin.php:161
+msgid "Apri il pannello Histeon CSS (Alt+Maiusc+H)"
+msgstr ""
+
+#: src/Plugin.php:183
+msgid "Salvato: è già sul sito."
+msgstr ""
+
+#: src/Plugin.php:195
+msgid "Colori, testi, spazi e forme del sito si scelgono nel pannello Histeon CSS: si apre da ogni pagina dalla barra di amministrazione, o con Alt+Maiusc+H, e mostra subito le modifiche sulla pagina che hai davanti."
+msgstr ""
+
+#: src/Plugin.php:196
+msgid "Apri il pannello sul sito"
+msgstr ""
+
+#: src/Plugin.php:197
+msgid "Nelle pagine usa le variabili --xb-* (per esempio var(--xb-space-m), var(--xb-primary)) e le classi di Histeon CSS; nell'editor a blocchi la palette e le dimensioni del testo sono già quelle del sito."
+msgstr ""

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fondamenta/testo",
+	"title": "Testo legato",
+	"category": "theme",
+	"description": "Un testo con valori del contenuto mostrato, senza un elemento attorno (fra due elementi della stessa riga).",
+	"textdomain": "fondamenta",
+	"attributes": {
+		"legami": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType",
+		"fondamenta/voce"
+	],
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"editorScript": "fondamenta-editor",
+	"editorStyle": "fondamenta-editor"
+}

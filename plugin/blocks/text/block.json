@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "xb/text",
+	"title": "Histeon · Testo",
+	"category": "design",
+	"description": "Testo con formattazione inline.",
+	"textdomain": "xb",
+	"attributes": {
+		"uid": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string",
+			"role": "content"
+		},
+		"verbatim": {
+			"type": "boolean"
+		}
+	},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false,
+		"reusable": false,
+		"inserter": false,
+		"renaming": false,
+		"lock": false
+	},
+	"editorScript": "xb-blocks-editor",
+	"editorStyle": "xb-blocks-editor"
+}

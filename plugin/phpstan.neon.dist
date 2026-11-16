@@ -1,0 +1,34 @@
+parameters:
+    # Level 8: full null and type checks. Level 9 would also reject every use of `mixed`, which WordPress
+    # APIs return everywhere; values are narrowed explicitly where it matters instead.
+    level: 8
+    dynamicConstantNames:
+        EMPTY_TRASH_DAYS: int|false
+    paths:
+        - src
+        - xb.php
+        - uninstall.php
+        - tests
+    excludePaths:
+        # Requires the dev WordPress at /var/www/html; analysed only through the test classes.
+        - tests/Integration/bootstrap.php
+        - tests/phpstan-stubs-fields.php
+        - tests/phpstan-stubs-woocommerce.php
+        - tests/phpstan-stubs-acss.php
+        - tests/phpstan-stubs-lingua-bridge.php
+        - tests/phpstan-stubs-static-bridge.php
+        - tests/phpstan-stubs-fluentcart.php
+        - tests/phpstan-stubs-fluentforms.php
+    stubFiles:
+        - tests/phpstan-stubs.php
+    bootstrapFiles:
+        - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+        - vendor/php-stubs/wp-cli-stubs/wp-cli-stubs.php
+        - tests/phpstan-bootstrap.php
+        - tests/phpstan-stubs-fields.php
+        - tests/phpstan-stubs-woocommerce.php
+        - tests/phpstan-stubs-acss.php
+        - tests/phpstan-stubs-lingua-bridge.php
+        - tests/phpstan-stubs-static-bridge.php
+        - tests/phpstan-stubs-fluentcart.php
+        - tests/phpstan-stubs-fluentforms.php

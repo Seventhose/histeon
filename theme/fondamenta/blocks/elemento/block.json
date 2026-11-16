@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fondamenta/elemento",
+	"title": "Elemento",
+	"category": "design",
+	"description": "Un elemento HTML con il suo tag e i suoi attributi: contiene altri blocchi, un testo o niente.",
+	"textdomain": "fondamenta",
+	"attributes": {
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
+		"attributi": {
+			"type": "array",
+			"default": []
+		},
+		"modo": {
+			"type": "string",
+			"enum": [
+				"blocchi",
+				"testo",
+				"vuoto"
+			],
+			"default": "blocchi"
+		},
+		"contenuto": {
+			"type": "rich-text",
+			"source": "rich-text",
+			"selector": "*"
+		},
+		"legami": {
+			"type": "object"
+		},
+		"href": {
+			"type": "string"
+		},
+		"src": {
+			"type": "string"
+		},
+		"alt": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType",
+		"fondamenta/voce",
+		"pattern/overrides"
+	],
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false
+	},
+	"editorScript": "fondamenta-editor",
+	"editorStyle": "fondamenta-editor"
+}

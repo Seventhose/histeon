@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "xb/raw",
+	"title": "Histeon · HTML grezzo",
+	"category": "design",
+	"description": "HTML inserito così com'è.",
+	"textdomain": "xb",
+	"attributes": {
+		"uid": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false,
+		"reusable": false,
+		"inserter": false,
+		"renaming": false,
+		"lock": false
+	},
+	"editorScript": "xb-blocks-editor",
+	"editorStyle": "xb-blocks-editor"
+}

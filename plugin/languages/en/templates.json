@@ -1,0 +1,19 @@
+{
+  "Template creato": "Template created",
+  "Il nome tecnico usa solo lettere minuscole, cifre e trattini (per esempio single-evento).": "The technical name uses only lowercase letters, digits and hyphens (for example single-event).",
+  "Esiste già un template con questo nome tecnico: aprilo dall'elenco.": "A template with this technical name already exists: open it from the list.",
+  "Il template da copiare non esiste nel tema attivo.": "The template to copy doesn’t exist in the active theme.",
+  "Nuovo template": "New template",
+  "Tipo": "Type",
+  "Nome tecnico": "Technical name",
+  "Evento singolo": "Single event",
+  "Area (per le parti)": "Area (for parts)",
+  "Generale": "General",
+  "Intestazione": "Header",
+  "Parti da": "Start from",
+  "Vuoto": "Empty",
+  "Copia di %1$s (%2$s)": "Copy of %1$s (%2$s)",
+  "Un nome della gerarchia di WordPress (page, single-evento, archive-evento, category, 404…) vale da solo dove previsto. Un altro nome crea un modello personalizzato, da assegnare a pagine e articoli dal loro editor.": "A name from the WordPress template hierarchy (page, single-event, archive-event, category, 404…) applies by itself where expected. Any other name creates a custom template, to assign to pages and posts from their editor.",
+  "Crea e apri in Histeon": "Create and open in Histeon",
+  "Template completo": "Full template"
+}

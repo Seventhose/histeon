@@ -1,0 +1,32 @@
+{
+  "projectId": "6f1c2b9e-3d4a-4b5c-8d6e-7f8091a2b3c4",
+  "styles": {
+    "id": "5e0b1a8d-2c39-4a4b-9c5d-6e7f8091a2b3",
+    "kind": "styles",
+    "schemaVersion": 1,
+    "revisionHash": "66cbf7b34fd7e07b5e6191dc1349c562bd6e52af7853b874268113f59616edbe",
+    "payload": {
+      "styles": [
+        {
+          "id": "style-1",
+          "selector": ".sito-testata",
+          "css": "padding:1rem"
+        }
+      ],
+      "globals": [
+        {
+          "id": "global-1",
+          "css": "body{margin:0}"
+        }
+      ],
+      "compiledCss": "",
+      "design": {},
+      "tokenOverrides": {},
+      "queries": {}
+    }
+  },
+  "slugs": [],
+  "entityIds": [],
+  "assets": [],
+  "files": {}
+}

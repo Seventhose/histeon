@@ -1,0 +1,7 @@
+<article class="card card--{props.variant}">
+  {#if props.image}
+    <img class="card__image" src={props.image.url} alt={props.image.alt}>
+  {/if}
+  <h3 class="card__title"><a href={props.url}>{props.title}</a></h3>
+  <div class="card__body">{@slot}</div>
+</article>

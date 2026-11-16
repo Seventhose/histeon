@@ -1,0 +1,12 @@
+{
+  "Script del sito": "Site scripts",
+  "Gli script del sito sono un elenco di al massimo %d voci.": "The site scripts are a list of at most %d entries.",
+  "Voce degli script del sito non valida.": "Invalid site script entry.",
+  "Ogni script del sito ha un id: minuscole, cifre e trattini, diverso dagli altri.": "Every site script has an id: lowercase letters, digits and hyphens, different from the others.",
+  "Ambito, posizione o modo di caricamento non validi.": "Invalid scope, position or loading mode.",
+  "Indirizzo non ammesso: %s. Serve un file di questo sito o un indirizzo https.": "Address not allowed: %s. Use a file of this site or an https address.",
+  "Un file di un altro sito (%s) va caricato con la sua impronta di integrità (sha384-… o sha512-…), così una sua modifica non gira qui.": "A file from another site (%s) must be loaded with its integrity hash (sha384-… or sha512-…), so a change to it does not run here.",
+  "Impronta di integrità non valida.": "Invalid integrity hash.",
+  "Gli script del sito possono essere pubblicati solo da chi ha il permesso unfiltered_html.": "Site scripts can only be published by someone with the unfiltered_html permission.",
+  "Solo chi ha il permesso unfiltered_html può cambiare gli script del sito.": "Only someone with the unfiltered_html permission can change the site scripts."
+}

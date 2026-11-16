@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "xb/slot-fill",
+	"title": "Histeon · Contenuto dello slot",
+	"category": "design",
+	"description": "Contenuto passato a uno slot di un componente.",
+	"textdomain": "xb",
+	"attributes": {
+		"uid": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false,
+		"reusable": false,
+		"inserter": false,
+		"renaming": false,
+		"lock": false
+	},
+	"editorScript": "xb-blocks-editor",
+	"editorStyle": "xb-blocks-editor",
+	"parent": [
+		"xb/component"
+	]
+}

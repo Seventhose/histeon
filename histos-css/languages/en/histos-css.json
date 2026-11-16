@@ -1,0 +1,11 @@
+{
+	"Il framework CSS libero di Histeon, per qualsiasi sito WordPress: token fluidi, palette OKLCH, classi, recipes, il pannello in popup (Alt+Maiusc+H) e la palette nell'editor a blocchi. Nessuna licenza.": "Histeon’s free CSS framework, for any WordPress site: fluid tokens, OKLCH palette, classes, recipes, the popup panel (Alt+Shift+H) and the palette in the block editor. No license keys.",
+	"Histeon CSS": "Histeon CSS",
+	"Histeon": "Histeon",
+	"Histeon CSS è già incluso in Histeon: il plugin separato resta fermo e puoi disattivarlo.": "Histeon CSS is already included in Histeon: the separate plugin stays idle and you can deactivate it.",
+	"Apri il pannello Histeon CSS (Alt+Maiusc+H)": "Open the Histeon CSS panel (Alt+Shift+H)",
+	"Salvato: è già sul sito.": "Saved: it’s already on the site.",
+	"Colori, testi, spazi e forme del sito si scelgono nel pannello Histeon CSS: si apre da ogni pagina dalla barra di amministrazione, o con Alt+Maiusc+H, e mostra subito le modifiche sulla pagina che hai davanti.": "The site’s colors, text, spacing and shapes are chosen in the Histeon CSS panel: it opens on any page from the admin bar, or with Alt+Shift+H, and shows the changes right away on the page in front of you.",
+	"Apri il pannello sul sito": "Open the panel on the site",
+	"Nelle pagine usa le variabili --xb-* (per esempio var(--xb-space-m), var(--xb-primary)) e le classi di Histeon CSS; nell'editor a blocchi la palette e le dimensioni del testo sono già quelle del sito.": "In your pages use the --xb-* variables (for example var(--xb-space-m), var(--xb-primary)) and the Histeon CSS classes; in the block editor the palette and text sizes are already the site’s."
+}

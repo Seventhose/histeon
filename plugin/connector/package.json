@@ -1,0 +1,10 @@
+{
+  "name": "histos-connector",
+  "version": "1.0.0",
+  "description": "Connects a local AI agent (Claude Code, Codex, Opencode, MCP clients) to an open Histeon builder tab.",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "bin": { "histos-connector": "histos-connector.mjs" },
+  "files": ["histos-connector.mjs"],
+  "engines": { "node": ">=18" }
+}

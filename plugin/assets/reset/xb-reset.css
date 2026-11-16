@@ -1,0 +1,90 @@
+/*
+ * XB reset — a small, modern baseline written for XB (GPL-3.0-or-later).
+ * In a cascade layer, so every theme, framework and XB style wins over it.
+ */
+@layer xb-reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		scrollbar-gutter: stable; /* No layout jump between short and long pages. */
+		-webkit-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+		hanging-punctuation: first last;
+	}
+
+	body,
+	h1, h2, h3, h4, h5, h6,
+	p,
+	figure,
+	blockquote,
+	dl, dd,
+	ul[class], ol[class] {
+		margin: 0;
+	}
+
+	ul[class], ol[class] {
+		padding: 0;
+		list-style: none;
+	}
+
+	body {
+		min-block-size: 100vh;
+		min-block-size: 100dvh;
+		line-height: 1.5;
+		text-rendering: optimizeSpeed;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.15;
+		text-wrap: balance;
+	}
+
+	p, li, figcaption {
+		text-wrap: pretty;
+	}
+
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-inline-size: 100%;
+	}
+
+	img,
+	video {
+		block-size: auto;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+		color: inherit;
+	}
+
+	textarea:not([rows]) {
+		min-block-size: 10em;
+	}
+
+	a:not([class]) {
+		text-decoration-skip-ink: auto;
+		color: currentColor;
+	}
+
+	:target {
+		scroll-margin-block: 5ex;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html:focus-within {
+			scroll-behavior: smooth;
+		}
+	}
+}

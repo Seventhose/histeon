@@ -1,0 +1,5 @@
+{
+  "«%1$s» (%2$s)": "“%1$s” (%2$s)",
+  "Questa versione rimette online %1$d contenuto ritirato dopo che era stata generata: %2$s. Per toglierlo di nuovo dal sito statico, pubblica ora su Cloudflare.": "This version puts back online %1$d item withdrawn after it was built: %2$s. To take it off the static site again, publish to Cloudflare now.",
+  "Questa versione rimette online %1$d contenuti ritirati dopo che era stata generata: %2$s. Per toglierli di nuovo dal sito statico, pubblica ora su Cloudflare.": "This version puts back online %1$d items withdrawn after it was built: %2$s. To take them off the static site again, publish to Cloudflare now."
+}

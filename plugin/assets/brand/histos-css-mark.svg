@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Histeon CSS</title>
+  <rect width="64" height="64" rx="15" fill="#171A33"/>
+  <!-- Histeon CSS (docs/brand.md): the Histeon loom, two posts and the warp threads. -->
+  <g stroke="#F3ECE1" stroke-linecap="round">
+    <line x1="16" y1="12" x2="16" y2="52" stroke-width="6"/>
+    <line x1="48" y1="12" x2="48" y2="52" stroke-width="6"/>
+    <line x1="27" y1="12" x2="27" y2="44" stroke-width="3" opacity=".8"/>
+    <line x1="37" y1="12" x2="37" y2="44" stroke-width="3" opacity=".8"/>
+  </g>
+  <circle cx="27" cy="48" r="3.4" fill="#FF6F5E"/>
+  <circle cx="37" cy="48" r="3.4" fill="#FF6F5E"/>
+  <!-- Three wefts, a scale of the same colour: the shades and the steps of the framework. Woven, alternating. -->
+  <g stroke-linecap="round" stroke-width="4.5">
+    <line x1="16" y1="22" x2="48" y2="22" stroke="#FFC9C1"/>
+    <line x1="16" y1="31" x2="48" y2="31" stroke="#FF9A8C"/>
+    <line x1="16" y1="40" x2="48" y2="40" stroke="#FF6F5E"/>
+  </g>
+  <g stroke="#F3ECE1" stroke-width="3">
+    <line x1="27" y1="19.5" x2="27" y2="24.5"/>
+    <line x1="37" y1="28.5" x2="37" y2="33.5"/>
+    <line x1="27" y1="37.5" x2="27" y2="42.5"/>
+  </g>
+</svg>

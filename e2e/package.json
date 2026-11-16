@@ -1,0 +1,17 @@
+{
+  "name": "@xb/e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "End-to-end browser tests of the XB builder (Playwright), run against the dev WordPress by dev/e2e.sh.",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "e2e": "playwright test",
+    "test": "vitest run --dir lib",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.64.1"
+  }
+}

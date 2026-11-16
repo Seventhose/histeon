@@ -1,0 +1,33 @@
+{
+  "name": "xb/xb-builder",
+  "description": "XB — code-first visual builder on top of Gutenberg (runtime plugin).",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "php": ">=8.3"
+  },
+  "require-dev": {
+    "php-stubs/wordpress-stubs": "^6.9",
+    "php-stubs/wp-cli-stubs": "^2.12",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "XB\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XB\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "platform-check": false
+  },
+  "scripts": {
+    "test": "phpunit",
+    "analyse": "phpstan analyse --memory-limit=1G"
+  }
+}

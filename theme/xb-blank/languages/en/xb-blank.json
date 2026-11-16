@@ -1,0 +1,10 @@
+{
+	"XB Blank richiede il plugin XB attivo: senza, i template non mostrano nulla.": "XB Blank needs the XB plugin active: without it, the templates show nothing.",
+	"XB Blank": "XB Blank",
+	"Header": "Header",
+	"Footer": "Footer",
+	"Tema di compatibilità: Fondamenta ne prende il posto, con gli stessi template. Resta per i siti che lo usano ancora.": "Compatibility theme: Fondamenta takes its place, with the same templates. It stays for the sites that still use it.",
+	"Fondamenta prende il posto di XB Blank, con gli stessi template. Quando la attivi, i template e le parti che hai personalizzato in questo sito passano a Fondamenta.": "Fondamenta takes the place of XB Blank, with the same templates. When you activate it, the templates and parts you customized on this site move to Fondamenta.",
+	"Attiva Fondamenta": "Activate Fondamenta",
+	"Installala da Aspetto → Temi → Aggiungi tema → Carica tema, con il file fondamenta-….zip della stessa release del plugin.": "Install it from Appearance → Themes → Add theme → Upload theme, with the fondamenta-….zip file of the same release as the plugin."
+}

@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "xb/loop",
+	"title": "Histeon · Loop",
+	"category": "design",
+	"description": "Ripete il contenuto per ogni elemento.",
+	"textdomain": "xb",
+	"attributes": {
+		"uid": {
+			"type": "string"
+		},
+		"source": {
+			"type": "object"
+		},
+		"as": {
+			"type": "string"
+		},
+		"index": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false,
+		"className": false,
+		"customClassName": false,
+		"reusable": false,
+		"inserter": false,
+		"renaming": false,
+		"lock": false
+	},
+	"editorScript": "xb-blocks-editor",
+	"editorStyle": "xb-blocks-editor"
+}

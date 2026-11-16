@@ -1,0 +1,8 @@
+<!-- wp:template-part {"slug":"header","tagName":"div"} /-->
+<main id="main" class="site-main">
+  <article class="entry">
+    <h1 class="entry__title">{this.title}</h1>
+    <div class="entry__content">{@content}</div>
+  </article>
+</main>
+<!-- wp:template-part {"slug":"footer","tagName":"div"} /-->

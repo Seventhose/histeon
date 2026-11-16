@@ -1,0 +1,7 @@
+[
+  { "id": "hero", "selector": ".hero", "css": "padding: 4rem 1.5rem; background: #0f172a; color: #f8fafc; &__title { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 } &__lead { max-width: 60ch; opacity: .85 }" },
+  { "id": "posts", "selector": ".posts", "css": "padding: 3rem 1.5rem; &__grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)) }" },
+  { "id": "card", "selector": ".card", "css": "border: 1px solid #e2e8f0; border-radius: .75rem; padding: 1.25rem; &--featured { border-color: #6366f1; box-shadow: 0 4px 20px rgb(99 102 241 / .2) } &__title { margin: 0 0 .5rem; font-size: 1.15rem; & a { color: inherit } } &__image { width: 100%; height: auto; border-radius: .5rem }" },
+  { "id": "header", "selector": ".site-header", "css": "display: flex; gap: 2rem; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; &__brand { font-weight: 700; text-decoration: none; color: inherit }" },
+  { "id": "footer", "selector": ".site-footer", "css": "padding: 2rem 1.5rem; color: #64748b; border-top: 1px solid #e2e8f0" }
+]

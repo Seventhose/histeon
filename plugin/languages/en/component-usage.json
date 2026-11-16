@@ -1,0 +1,9 @@
+{
+  "(in sviluppo)": "(in development)",
+  "Il componente «%1$s» è in uso e non si può eliminare. Toglilo prima da: %2$s.": "The component “%1$s” is in use and cannot be deleted. Remove it first from: %2$s.",
+  "Componente in uso": "Component in use",
+  "Tolto": "Removed",
+  "Portato nel JavaScript della pagina": "Moved into the page's JavaScript",
+  "Media query e breakpoint": "Media queries and breakpoints",
+  "Da controllare": "To check"
+}

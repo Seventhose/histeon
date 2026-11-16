@@ -1,0 +1,22 @@
+{
+  "Histeon: alcune versioni non si leggono.": "Histeon: some versions cannot be read.",
+  "Il loro contenuto non corrisponde più alla loro impronta, e nel builder le pagine possono apparire vuote. Succede di solito quando il sito viene spostato a un altro indirizzo (All-in-One WP Migration, Duplicator, search-replace): l'indirizzo cambia anche dentro le versioni. Scrivi l'indirizzo che il sito aveva prima dello spostamento: Histeon ripara solo le versioni che differiscono soltanto per quell'indirizzo, senza cambiare il contenuto.": "Their content no longer matches their fingerprint, and pages may look empty in the builder. It usually happens when the site moves to another address (All-in-One WP Migration, Duplicator, search-replace): the address changes inside the versions too. Enter the address the site had before the move: Histeon repairs only the versions that differ by that address alone, without changing their content.",
+  "Indirizzo di prima": "Previous address",
+  "Ripara le versioni": "Repair the versions",
+  "Ho controllato le pagine: accetto le versioni che restano così come sono ora.": "I have checked the pages: I accept the remaining versions as they are now.",
+  "Accetta le versioni rimaste": "Accept the remaining versions",
+  "Se lo spostamento ha portato tutti gli indirizzi a https, Histeon non può dimostrare che è cambiato solo l'indirizzo. In quel caso, dopo la riparazione, puoi accettare le versioni rimaste: è registrato nel registro di Histeon.": "If the move turned every address into https, Histeon cannot prove that only the address changed. In that case, after the repair, you can accept the remaining versions: this is recorded in the Histeon log.",
+  "Solo un amministratore ripara le versioni.": "Only an administrator can repair the versions.",
+  "Per accettare le versioni rimaste serve la conferma.": "Accepting the remaining versions needs your confirmation.",
+  "L'indirizzo di prima non è valido: scrivilo intero, per esempio http://sito.local.": "The previous address is not valid: write it in full, for example http://site.local.",
+  "Histeon ha controllato %1$d versioni e ne ha riparate %2$d.": "Histeon checked %1$d versions and repaired %2$d.",
+  "%d accettata così com'è.": "%d accepted as it is.",
+  "%1$d non si legge ancora (%2$s). Controlla l'indirizzo di prima; se tutti gli indirizzi sono passati a https, controlla le pagine e accetta le versioni rimaste.": "%1$d still cannot be read (%2$s). Check the previous address; if every address became https, check the pages and accept the remaining versions.",
+  "La versione %s non si legge: il contenuto non corrisponde alla sua impronta. Se il sito è stato spostato a un altro indirizzo, ripara le versioni dall'avviso di Histeon nell'amministrazione.": "Version %s cannot be read: its content does not match its fingerprint. If the site was moved to another address, repair the versions from the Histeon notice in the admin.",
+  "Versioni riparate dopo uno spostamento": "Versions repaired after a move",
+  "%d accettate così come sono.": "%d accepted as they are.",
+  "%1$d non si leggono ancora (la prima è %2$s). Controlla l'indirizzo di prima; se tutti gli indirizzi sono passati a https, controlla le pagine e accetta le versioni rimaste.": "%1$d still cannot be read (the first is %2$s). Check the previous address; if every address became https, check the pages and accept the remaining versions.",
+  "Una release si pubblica solo dal builder o dalla schermata Release, non con una password per applicazioni.": "A release is published only from the builder or the Releases screen, not with an application password.",
+  "Una release si ripristina solo dal builder o dalla schermata Release, non con una password per applicazioni.": "A release is restored only from the builder or the Releases screen, not with an application password.",
+  "Il sito statico si mette online solo dal builder o con WP-CLI, non con una password per applicazioni.": "The static site is put online only from the builder or with WP-CLI, not with an application password."
+}

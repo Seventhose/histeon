@@ -1,0 +1,15 @@
+{
+  "Aggiungi contenuto a «%s»": "Add content to “%s”",
+  "Area «%s»": "Area “%s”",
+  "Aree da riempire": "Areas to fill",
+  "Aree modificabili del componente": "Editable areas of the component",
+  "In sola lettura: le modifiche le fa chi gestisce il sito.": "Read-only: changes are made by whoever manages the site.",
+  "Valore predefinito": "Default value",
+  "La struttura di questa pagina è bloccata: qui si cambiano solo testi e immagini (%s).": "This page's structure is locked: only texts and pictures change here (%s).",
+  "Histeon pieno": "Histeon solid",
+  "Histeon contorno": "Histeon outline",
+  "Histeon sezione": "Histeon section",
+  "Histeon scheda": "Histeon card",
+  "Histeon arrotondata": "Histeon rounded",
+  "Histeon citazione": "Histeon quote"
+}

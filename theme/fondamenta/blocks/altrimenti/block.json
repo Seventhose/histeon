@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fondamenta/altrimenti",
+	"title": "Se il loop è vuoto",
+	"category": "theme",
+	"description": "Dentro un loop: i blocchi da mostrare quando il loop non ha elementi.",
+	"textdomain": "fondamenta",
+	"parent": [ "fondamenta/loop" ],
+	"attributes": {},
+	"usesContext": [ "postId", "postType", "fondamenta/voce" ],
+	"supports": { "html": false, "className": false, "customClassName": false, "multiple": false },
+	"editorScript": "fondamenta-editor",
+	"editorStyle": "fondamenta-editor"
+}

@@ -1,0 +1,14 @@
+{
+  "lingua-bridge": {
+    "zip": "../lingua-bridge/dist/lingua-bridge-1.14.0.zip",
+    "sha256": "cd3a6dd9381acc3568ca890eea6b1bead62a8ea9137208e012aaea4e6aea0726",
+    "folder": "lingua-bridge",
+    "main": "lingua-bridge.php"
+  },
+  "static-bridge": {
+    "zip": "../../../Documents/Codex/2026-09-26/pro/static-bridge/dist/static-bridge-2.5.0.zip",
+    "sha256": "5102c7086835b3bb61008fd0c55bb3b611f3f61fedc7ccbc60d850d570ab46b2",
+    "folder": "static-bridge",
+    "main": "static-bridge.php"
+  }
+}

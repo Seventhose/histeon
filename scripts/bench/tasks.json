@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "note": "Compiti fissi per i modelli piccoli (I8): il testo è quello che riceve l'agente, senza aiuti. Cambiarli rende i risultati non confrontabili: si aggiunge una versione nuova.",
+  "tasks": [
+    {
+      "id": "hero",
+      "title": "Una sezione con titolo, testo e pulsante",
+      "prompt": "Nella pagina {page} crea una sezione introduttiva: un titolo principale «Benvenuti in libreria», un paragrafo di presentazione di una o due frasi e un pulsante «Scopri il catalogo» che porta a /catalogo/. Salva in sviluppo.",
+      "criteria": [
+        { "label": "una section", "kind": "element", "select": { "tag": "section" } },
+        { "label": "h1 con il titolo", "kind": "element", "select": { "tag": "h1", "text": "Benvenuti in libreria" } },
+        { "label": "un paragrafo", "kind": "element", "select": { "tag": "p" } },
+        { "label": "link a /catalogo/", "kind": "element", "select": { "tag": "a", "attr": { "href": "/catalogo/" }, "text": "Scopri il catalogo" } },
+        { "label": "titolo dentro la section", "kind": "inside", "select": { "tag": "section" }, "has": { "tag": "h1" } },
+        { "label": "niente HTML grezzo", "kind": "no-raw" }
+      ]
+    },
+    {
+      "id": "stile",
+      "title": "Uno stile per selettore",
+      "prompt": "Nella pagina {page} aggiungi una scheda: un div con la classe bench-card che contiene un titolo h3 «Novità» e un paragrafo. Dai alla classe .bench-card un padding pari alla spaziatura media del framework (var(--xb-space-m)), un bordo di 1px continuo e gli angoli arrotondati con var(--xb-radius-m). Lo stile va nel selettore .bench-card, non nell'attributo style. Salva in sviluppo.",
+      "criteria": [
+        { "label": "div.bench-card", "kind": "element", "select": { "tag": "div", "class": "bench-card" } },
+        { "label": "h3 nella scheda", "kind": "inside", "select": { "class": "bench-card" }, "has": { "tag": "h3", "text": "Novità" } },
+        { "label": "padding con --xb-space-m", "kind": "style", "selector": ".bench-card", "has": { "padding": "var\\(--xb-space-m\\)" } },
+        { "label": "bordo 1px", "kind": "style", "selector": ".bench-card", "has": { "border": "1px" } },
+        { "label": "angoli con --xb-radius-m", "kind": "style", "selector": ".bench-card", "has": { "border-radius": "var\\(--xb-radius-m\\)" } },
+        { "label": "niente HTML grezzo", "kind": "no-raw" }
+      ]
+    },
+    {
+      "id": "loop",
+      "title": "Gli ultimi articoli con un loop",
+      "prompt": "Nella pagina {page} mostra gli ultimi 3 articoli del blog: per ognuno il titolo come link all'articolo e la data di pubblicazione. Usa un loop di Histeon, non un elenco scritto a mano. Salva in sviluppo.",
+      "criteria": [
+        { "label": "loop sugli articoli", "kind": "loop", "source": { "kind": "preset|expr" } },
+        { "label": "link al titolo dentro il loop", "kind": "loop", "has": { "tag": "a", "attr": { "href": "\\{[a-z_]+\\.(url|link|permalink)\\}" } } },
+        { "label": "titolo nel loop", "kind": "loop", "has": { "text": "\\{[a-z_]+\\.title\\}" } },
+        { "label": "data nel loop", "kind": "loop", "has": { "text": "\\{[a-z_]+\\.date" } },
+        { "label": "niente HTML grezzo", "kind": "no-raw" }
+      ]
+    },
+    {
+      "id": "componente",
+      "title": "Un componente con props, usato due volte",
+      "prompt": "Crea un componente con la chiave bench/scheda e due props, titolo e testo, che mostra il titolo in un h3 e il testo in un paragrafo. Poi nella pagina {page} usalo due volte con titoli e testi diversi. Salva in sviluppo.",
+      "criteria": [
+        { "label": "due istanze con le props", "kind": "component", "ref": "bench/scheda", "min": 2, "props": ["titolo", "testo"] },
+        { "label": "niente HTML grezzo", "kind": "no-raw" }
+      ]
+    },
+    {
+      "id": "vuoto",
+      "title": "Un loop con il caso «nessun risultato»",
+      "prompt": "Nella pagina {page} elenca gli eventi (tipo di contenuto «evento», o gli articoli se gli eventi non ci sono) con il loro titolo; quando non ce n'è nessuno la pagina deve dire «Nessun evento in programma». Salva in sviluppo.",
+      "criteria": [
+        { "label": "un loop", "kind": "loop" },
+        { "label": "ramo «altrimenti» con il messaggio", "kind": "else", "text": "Nessun evento in programma" },
+        { "label": "niente HTML grezzo", "kind": "no-raw" }
+      ]
+    }
+  ]
+}

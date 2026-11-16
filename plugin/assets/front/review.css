@@ -1,0 +1,15 @@
+/* Histeon review bar (docs/spec/review.md): only on pages opened with a signed preview link. */
+.xb-review { position: fixed; left: 12px; bottom: 12px; z-index: 2147483000; display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 10px; background: #171a33; box-shadow: 0 8px 24px rgb(0 0 0 / 0.25); font: 13px/1.3 system-ui, sans-serif; }
+.xb-review__btn { all: unset; box-sizing: border-box; padding: 6px 12px; border-radius: 7px; background: rgb(255 255 255 / 0.12); color: #f3ece1; font: 600 13px/1.3 system-ui, sans-serif; cursor: pointer; }
+.xb-review__btn:focus-visible { outline: 2px solid #ff6f5e; outline-offset: 2px; }
+.xb-review__btn[aria-pressed='true'], .xb-review__btn--ok { background: #ff6f5e; color: #171a33; }
+.xb-review__note { color: #f3ece1; padding: 0 6px; }
+.xb-review-picking [data-xb-uid] { cursor: crosshair; }
+.xb-review-hover { outline: 2px dashed #ff6f5e !important; outline-offset: 2px; }
+.xb-review__box { position: absolute; z-index: 2147483001; width: 320px; display: grid; gap: 8px; padding: 12px; border-radius: 10px; background: #fff; color: #171a33; box-shadow: 0 12px 32px rgb(0 0 0 / 0.25); font: 14px/1.4 system-ui, sans-serif; }
+.xb-review__box[hidden] { display: none; }
+.xb-review__box textarea, .xb-review__box input { box-sizing: border-box; width: 100%; padding: 8px; border: 1px solid #d8d4cc; border-radius: 6px; font: inherit; color: inherit; background: #fff; }
+.xb-review__box .xb-review__trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.xb-review__row { display: flex; gap: 6px; }
+.xb-review__box .xb-review__btn { background: #ece9e2; color: #171a33; }
+.xb-review__box .xb-review__btn--ok { background: #171a33; color: #f3ece1; }
